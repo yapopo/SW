@@ -1,0 +1,61 @@
+
+
+div.left {
+  background-color: pink;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  line-height: 400px;
+  font-style: italic;
+  color: white;
+  font-weight: 1000;
+}
+
+div.right {
+  background-color: blueviolet;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  line-height: 400px;
+  font-style: italic;
+  color: white;
+  font-weight: 1000;
+}
+
+span {
+  color: blue;
+  float: none;
+}
+
+.txt {
+  color: black;
+  border: 3px solid salmon;
+}
+
+.border {
+  border: 1px solid plum;
+  border-radius: 10px;
+  background-color :cadetblue;
+  text-align: center;
+  color: wheat;
+}
+
+.fruit {
+  color :cornflowerblue;
+}
+
+.apple {
+  color: tomato;
+}
+
+.banana {
+  color:yellow;
+}
+
+ul.fruit {
+  width: 200px;
+  border: 1px solid green;
+  border-radius: 50px;
+  background-color: saddlebrown;
+}

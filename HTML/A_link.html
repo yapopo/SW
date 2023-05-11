@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="이 페이지는 a태그를 연습하는 페이지">
+  <meta name="keyword" content="HTML,a태그, 링크 ">
+  <meta name="author" content="강다은">
+  <link rel="stylesheet" href="../CSS/A_link.css">
+  <title>A link 연습</title>
+</head>
+<body>
+
+  <h1>
+    <a href="./A_link2.html">두번째 페이지로 이동</a>
+  </h1>
+  <!-- target속성을 따로 작성하지 않으면 디폴트값은 self(현재창) target속성에 blank는 새로운창에서 열기 -->
+  <a href="https://www.naver.com/" target="_self">NAVER</a>
+  <a href="http://google.co.kr/" target="_blank">GOOGLE</a>
+  <p><a href="http://google.co.kr">여기</a>를 누르면 구글로 이동</p>
+
+
+  <!-- src = "이미지가 위치한 경로"  alt="이미지대체 txt" -->
+  <div class="google">
+    <a href="https://google.com/" target="_blank">
+      <img src="../IMAGES/google.png" alt="google logo">
+    </a>
+  </div>
+
+  <div class="naver">
+    <a href="http://naver.com/" target="_blank">
+      <img src="../IMAGES/naver.png" alt="네이버로고">
+    </a>
+  </div>
+
+  <div class="youtube">
+    <a href="http://youtube.co.kr/" target="_blank">
+      <img src="../IMAGES/youtube.png" alt="유튜브로고"
+>
+    </a>
+  </div>
+
+  <!-- 다른 HTML 파일로 이동 -->
+  <div>
+    <p>누르면 
+      <a href="../HTML/sematicTag.html" target="_blank">sematicTag.html</a>로 이동합니다.
+    </p>
+  </div>
+
+
+  <div>
+    <!-- 이메일로 연동 mailto: -->
+    <a href="mailto:dbrkdhk4120@gmail.com">
+      <img src="../IMAGES/email.png" alt="이메일아이콘" width="20%">
+    </a>
+    <p>이메일을 보내기 위해 아이콘을 눌러주세요</p>
+  </div>
+
+  <div>
+    <!-- 전화로 연동 tel:전화번호  -->
+    <p><img src="../IMAGES/phone.webp" alt="전화기아이콘" width="10%"></p>
+    <a href="tel:01049058448">
+      전화걸기
+    </a>
+  </div>
+
+<div>
+  <!-- 이미지 다운받기 -->
+  <a href="../IMAGES/twitter.png" download>
+    <img src="../IMAGES/twitter.png" alt="트위터로고" width="10%">
+  </a>
+  <p>누르면 이미지가 다운받아집니다</p>
+</div>
+</body>
+</html>

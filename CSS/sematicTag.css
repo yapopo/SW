@@ -1,0 +1,23 @@
+.b-weight {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.delete {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bgcolor {
+  background-color: yellow;
+}
+
+.markcolor {
+  background-color: rgb(147, 236, 222);
+}

@@ -1,0 +1,30 @@
+img {
+  width: 200px;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.box {
+  border: 2px solid;
+  border-radius: 20px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.google {
+  border-color: rgb(101, 179, 231);
+  margin-bottom: 100px;
+}
+
+.naver {
+  border-color: rgb(60, 190, 60);
+}
+
+.naver p a {
+  color: rgb(85, 209, 85);
+  text-decoration: none;
+}

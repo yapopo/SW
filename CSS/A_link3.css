@@ -1,0 +1,29 @@
+div {
+  width: 400px;
+  margin: 20px auto;
+}
+
+div img {
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.google {
+  border: 2px solid blue;
+  border-radius: 20px;
+  padding: 0 30px 0 30px;
+}
+
+.naver {
+  border: 2px solid green;
+  border-radius: 20px;
+  padding: 0 30px 0 30px;
+}
+
