@@ -1,3 +1,30 @@
 * {
   margin: 0;
 }
+
+body {
+  background-color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.google {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+.google img {
+  width: 400px;
+}
+
+.txt {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 30px;
+  margin-top: 30px;
+}
