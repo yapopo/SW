@@ -30,3 +30,32 @@
 .left-flex {
   display: flex;
 }
+
+.right-float div {
+  float: right;
+}
+
+.right-float div div {
+  float: left;
+}
+
+.right-inline  {
+  text-align: right;
+}
+
+/* text-align : 문단을 수평으로 정렬하는 속성 */
+/* block요소 안에 있는 inline요소를 정렬한다 */
+/* text를 정렬할 때는 부모가 아닌 자기자신에게 적용 가능 */
+.right-inline div {
+  display: inline-block;
+  text-align: left;
+}
+
+.right-flex {
+  display: flex;
+  justify-content: right;
+}
+
+.right-flex div {
+  text-align: left;
+}
