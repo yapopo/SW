@@ -85,3 +85,38 @@
   display: flex;
   justify-content: center;
 }
+
+
+.flex {
+  display: flex;
+  /* justify-content : 가로축을 정렬하는 속성 */
+  /* justify-content : space-between 
+      박스 사이의 공간을 알아서 띄워줌 */
+  justify-content: center;
+  /* align-items : 세로축을 정렬하는 속성 */
+  align-items: center;
+  /* flex-direction : 박스가 떨어지는 방향 */
+  flex-direction: row ;
+  height: 700px;
+  border: 2px solid black;
+}
+
+.flex div {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 부모요소가 display:flex 인 자식요소들에게
+order라는 속성으로 화면에 보이는 순서를 바꿀 수 있다 */
+.fir {
+  order: 1;
+}
+
+.sec {
+  order: 0;
+}
+
+.thir{
+  order: -1;
+}
+
