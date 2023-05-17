@@ -1,0 +1,31 @@
+.layout {
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header {
+  height: 100px;
+  background-color: aqua;
+}
+
+.left-box {
+  float: left;
+  width: 200px;
+  height: 500px;
+  background-color: cornflowerblue;
+}
+
+.right-box {
+  float: right;
+  width: 800px;
+  height: 500px;
+  background-color: coral;
+}
+
+.footer {
+  clear: both;
+  height: 150px;
+  background-color: lightgreen;
+}
