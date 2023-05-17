@@ -59,3 +59,29 @@
 .right-flex div {
   text-align: left;
 }
+
+.center-float {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.center-float div {
+  float: left;
+  box-sizing: border-box;
+  /* 내가 지정한 박스 사이즈에 border까지 포함시킨 값 */
+  border: 30px solid blue;
+}
+
+.center-inline {
+  text-align: center;
+}
+
+.center-inline div {
+  display: inline-block;
+  text-align: left;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+}
