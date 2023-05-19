@@ -1,4 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
+.table-border {
+  border-collapse: collapse;
+  /* seperate(기본값) : border가 두줄로 되어있음 */
+  /* collapse : border를 한줄로 바꿔준다 */
 }
