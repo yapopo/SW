@@ -97,18 +97,23 @@ nav {
 
 .first-box {
   margin-top: -60px;
+  margin-bottom: 50px;
 }
 
 .first-box div {
   margin: 0 auto;
   text-align: center;
-  box-shadow: #222222 4px 4px 4px 0;
+  box-shadow: 5px 5px 8px #131313;
   width: 550px;
   padding: 60px 0;
   background-color: #000;
   border-radius: 20px;
   color: #fff;
 } 
+/* box-shadow */
+/* offset-x축(수평) | offset-y축(수직) | color*/
+/* offset-x축 | offset-y축 | blur-radius | color*/
+/* offset-x축 | offset-y축 | blur-radius | spread-radius | color*/
 
 .first-box p {
   margin-top: 30px;
