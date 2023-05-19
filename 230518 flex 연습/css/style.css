@@ -48,6 +48,7 @@ nav {
   color: darkcyan;
 }
 
+
 .bg {
   height: 600px;
   /* backgrounㅠd-image 속성을 사용할때는
@@ -92,5 +93,24 @@ nav {
   /* button 태그는 boder 속성을 기본으로 지님 */
   border: none;
   font-weight: bold;
+}
+
+.first-box {
+  margin-top: -60px;
+}
+
+.first-box div {
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: #222222 4px 4px 4px 0;
+  width: 550px;
+  padding: 60px 0;
+  background-color: #000;
+  border-radius: 20px;
+  color: #fff;
+} 
+
+.first-box p {
+  margin-top: 30px;
 }
 
