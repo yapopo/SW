@@ -161,6 +161,8 @@ footer h3 {
 
 .ft-list {
   display: flex;
+  width: 300px;
+  justify-content: space-around;
   margin-right: 30px;
 }
 
