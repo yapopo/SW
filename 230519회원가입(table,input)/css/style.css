@@ -1,5 +1,11 @@
+p {
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+
 .table-border {
   border-collapse: collapse;
   /* seperate(기본값) : border가 두줄로 되어있음 */
   /* collapse : border를 한줄로 바꿔준다 */
 }
+
