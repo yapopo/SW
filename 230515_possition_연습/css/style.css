@@ -37,7 +37,7 @@ nav {
 }
 
 .gnb-list:hover a {
-  color: rgb(179, 16, 255);
+  color: #000;
 }
 
 header img {
@@ -100,10 +100,13 @@ header img {
 }
 
 .sdbar {
-  width: 250px;
+  position: fixed;
+  top: 150px;
+  right: 15px;
+  width: 200px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #7a7a7a;
+  box-shadow: 5px 5px 2px #919191;
 
 }
 .sd-menu {
@@ -113,4 +116,86 @@ header img {
 
 .sd-menu a {
   color: black;
+}
+
+.sd-menu:hover {
+  background-color: skyblue;
+}
+
+.sd-menu:hover a {
+  color: #fff;
+}
+
+.sd-menu:hover:first-child {
+  background-color: skyblue;
+  border-radius: 10px 10px 0 0;
+}
+
+.sd-menu:hover:last-child {
+  background-color: skyblue;
+  border-radius: 0 0 10px 10px;
+}
+
+
+.scroll {
+  margin-top: 30px;
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: rgb(217, 241, 254);
+}
+
+.img {
+  width: 800px;
+  height: 500px;
+  background-color: #fff;
+  background-image: url(../imgs/icecream.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+}
+
+.arrow i {
+  font-size: 30px;
+  color: darkcyan;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: skyblue;
+}
+
+footer h3 {
+  margin-left: 50px;
+  color: #fff;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-right: 50px;
+}
+
+.ft-list:hover i {
+  color:#000;
+}
+
+i {
+  font-size: 30px;
+  color: #fff;
 }
