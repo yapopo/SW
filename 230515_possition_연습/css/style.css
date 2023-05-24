@@ -156,7 +156,7 @@ header img {
   background-image: url(../imgs/icecream.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 30%;
   background-attachment: fixed;
 }
 
