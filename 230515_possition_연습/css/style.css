@@ -118,11 +118,12 @@ header img {
 }
 .sd-menu {
   text-align: center;
-  padding: 20px;
 }
 
 .sd-menu a {
+  display: inline-block;
   color: black;
+  padding: 20px 40px;
 }
 
 .sd-menu:hover {
@@ -163,14 +164,14 @@ header img {
   background-image: url(../imgs/icecream.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 30%;
+  background-size: 600px;
   background-attachment: fixed;
 }
 
 .arrow {
   position: fixed;
-  bottom: 70px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
 }
 
 .arrow i {
@@ -182,7 +183,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  padding: 20px 0;
   background-color: skyblue;
 }
 
@@ -194,14 +195,20 @@ footer h3 {
 footer ul {
   display: flex;
   justify-content: space-between;
-  width: 150px;
   margin-right: 50px;
+}
+
+.ft-list a {
+  padding-right: 20px;
+}
+
+.ft-list:last-child a {
+  padding: 0;
 }
 
 .ft-list:hover i {
   color:#000;
 }
-
 i {
   font-size: 30px;
   color: #fff;
