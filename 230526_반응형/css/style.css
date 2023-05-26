@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+header, footer {
+  padding: 30px 0;
+  background-color: darkolivegreen;
+  color: #fff;
+  font-size: 30px;
+}
+
+.bg-img {
+  height: 600px;
+  background-image: url(../imgs/marek-piwnicki-PPoWdNggYu8-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box-list {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+.box-list div {
+  width: 30%;
+  height: 400px;
+  border: 1px solid darkgreen;
+}
