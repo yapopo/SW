@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="flex 연습 페이지">
+  <meta name="keyword" content="HTML,FLEX,CSS ">
+  <meta name="author" content="강다은">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- favicon code -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>FLEX 연습페이지</title>
+</head>
+<body>
+  <div classd="wrapper">
+    <!-- header 태그 안에는 반드시 hn 태그가 하나이상 포함되어야 한다 -->
+    <header>
+      <nav>
+        <h1 class="logo">
+          <a href="./index.html">
+            <img src="../imgs/applelogo.png" alt="로고이미지">
+          </a>
+        </h1>
+
+        <ul class="gnb-item">
+          <li><a href="./menu1.html">menu1</a</li>
+          <li><a href="./menu2.html">menu2</a></li>
+          <li><a href="./menu3.html">menu3</a></li>
+        </ul>        
+      </nav>
+    </header>
+<!-- header END -->
+<!-- 문서내에서 main태그는 한번만 사용한다
+주 컨텐츠가 main 태그 안에 들어간다 -->
+    <main>
+      <section class="bg">
+        <div class="bg-txt">
+          <h2 class="bg-title">Lorem ipsum dolor sit amet.</h2>
+          <p class="bg-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
+             Quod perferendis, atque ducimus molestiae nobis enim qui!
+             Tempora in natus tempore?
+          </p>
+          <button class="bg-btn" onclick="alert('Hellow World!')">버튼</button>
+        </div>
+      </section>
+
+      <section class="first-box">
+        <div>
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+            Animi autem saepe explicabo alias ipsam eius reiciendis<br>
+            assumenda doloribus ab commodi!</p>
+        </div>
+      </section>
+
+      <section class="post-box-list">
+        <div class="post-box-item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Facere totam fugiat hic quod temporibus veritatis. 
+            Accusamus error sapiente numquam ut!</p>
+        </div>
+        <div class="post-box-item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Facere totam fugiat hic quod temporibus veritatis. 
+            Accusamus error sapiente numquam ut!</p>
+        </div>
+        <div class="post-box-item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Facere totam fugiat hic quod temporibus veritatis. 
+            Accusamus error sapiente numquam ut!</p>
+        </div>
+      </section>
+    </main>
+<!-- main END -->
+    <footer>
+      <h3>Contact</h3>
+
+      <ul class="ft-list">
+        <li><a href="mailto:dbrkdhk4120@naver.com">메일</a></li>
+        <li><a href="tel:010-0000-0000">전화</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank">유튜브</a></li>
+      </ul>
+    </footer>
+<!-- footer END -->
+  </div>
+</body>
+</html>
