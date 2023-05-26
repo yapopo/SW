@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keyword" content="HTML,CSS,display">
+  <meta name="author" content="강다은">
+  <title>display&visibillity</title>
+</head>
+
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .box1 {
+    background-color: aquamarine;
+  }
+
+  .box2 {
+    /* display:none; 화면상에서 박스가 공간도 차지하지 않고 보이지도 않는다 */
+    /* visibility:hidden; 보이지는 않지만 공간은 유지한다 */
+    /* display: none; */
+    visibility: hidden;
+    background-color: coral;
+  }
+
+  .box3 {
+    background-color: yellowgreen;
+  }
+</style>
+<!-- style -->
+<body>
+  <div class="wrapper">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+</body>
+</html>
