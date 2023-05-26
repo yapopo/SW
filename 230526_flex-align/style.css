@@ -24,16 +24,16 @@ body {
   transition: all 300ms;
 }
 
-.box1 {
+.red {
   background-color: red;
 }
 
-.box2 {
+.yellow {
   background-color: yellow;
   align-self: center;
 }
 
-.box3 {
+.green {
   background-color: green;
   align-self: flex-end;
 }
@@ -42,14 +42,14 @@ body {
   transform: rotate(-45deg);
 }
 
-.wrapper:hover .box1 {
+.wrapper:hover .red {
   border-color: red;
 }
 
-.wrapper:hover .box2 {
+.wrapper:hover .yellow {
   border-color: yellow;
 }
 
-.wrapper:hover .box3 {
+.wrapper:hover .green {
   border-color: green;
 }
