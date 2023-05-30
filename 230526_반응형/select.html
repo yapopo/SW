@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>형제선택자</title>
+</head>
+
+<style>
+  /* .parents:hover .red {
+    color: red;
+  } */
+/* 형제요소 선택자에는 ~ | + 가 있다 */
+/* ~ 는 모든형제요소에 효과가 가지만 +는 바로 아래 형제요소에만 효과가 간가  */
+  .parents:hover ~ .parents2{
+    font-weight: bold;
+  }
+/* 태그 < class < i 순서로 css에서 우선순위로 속성이 적용된다 */
+  h1:hover + p {
+    color: blue;
+    font-weight: bold;
+  }
+
+  .first:hover ~ .second{
+    text-decoration: underline;
+  }
+
+  .box {
+    border: 5px solid darkblue;
+  }
+
+  .box div {
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .box1 {
+    background-color: red;
+    transition: transform 5s ease;
+  }
+
+  .box2 {
+    background-color: blue;
+    transition: transform 5s linear;
+  }
+
+  .box3 {
+    background-color: yellow;
+    transition: transform 5s ease-in;
+  }
+
+  .box4 {
+    background-color: green;
+    transition: transform 5s ease-out;
+  }
+
+  .box5 {
+    background-color: black;
+    transition: transform 5s ease-in-out;
+  }
+
+ .box h1:hover ~ div {
+    transform: translateX(500px);
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="parents">
+      <h1>안녕</h1>
+      <p class="first">하세요</p>
+      <p class="second">하세용</p>
+      <p>하신가요</p>
+      <p>하십시오</p>
+    </div>
+
+    <p class="parents2">부모의 형제</p>
+
+    <div class="box">
+      <h1>박스이동</h1>
+      <div class="box1">ease</div>
+      <div class="box2">linear</div>
+      <div class="box3">ease-in</div>
+      <div class="box4">ease-out</div>
+      <div class="box5">ease-in-out</div>
+    </div>
+
+    </div>
+  </div>
+</body>
+</html>
