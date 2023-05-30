@@ -191,14 +191,26 @@ footer h3 {
 
 @media screen and (max-width:768px) {
 
+  .gnb-item {
+  width: 200px;
+}
+
   .bg {
     height: 400px;
+  }
+
+  .bg-title {
+    font-size: 30px;
+  }
+
+  .bg-content {
+    font-size: 18px;
   }
 
   .first-box div {
     width: 70%;
     padding: 80px 20px;
-  } 
+  }
 
   .bg-txt {
     height: 400px;
@@ -206,6 +218,8 @@ footer h3 {
 
   .bg-btn {
     margin-top: 20px;
+    padding: 8px 16px;
+    border-radius: 10px;
   }
 
   .first-box {
@@ -214,6 +228,14 @@ footer h3 {
 
   .post-box-list {
     margin-top: 0;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+
+  .ft-list {
+    width: 250px;
   }
 
 }
