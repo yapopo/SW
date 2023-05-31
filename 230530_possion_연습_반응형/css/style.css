@@ -92,24 +92,24 @@ header img {
   /* position: relative; */
   display: flex;
   justify-content: space-between;
+  margin: 30px auto 0 auto;
+  width: 90%;
   /* top: -80px; */
 }
 
 .txt-box-list {
   background-color: rgb(217, 241, 254);
   border-radius: 10px;
+  width: 25%;
   /* width: 30%; */
   /* max-width: 600px;
   min-width: 300px; */
   /* margin: 30px auto 0 auto; */
-  margin: 30px 30px 0 0;
+  margin: 0 auto;
   padding: 100px 30px;
   text-align: center;
 }
 
-.txt-box-list:first-child {
- margin-left: 30px;
-}
 
 .txt-box-list p {
   margin-top: 20px;
@@ -163,31 +163,31 @@ header img {
 
 .img-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 700px;
   background-color: rgb(217, 241, 254);
 }
 
 .img {
-  width: 45%;
+  width: 600px;
   height: 600px;
   background-color: #fff;
   background-image: url(../imgs/icecream.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left 30px bottom ;
   background-size: 600px;
   background-attachment: fixed;
   margin-left: 60px;
 }
 
 .img2 {
-  width: 45%;
+  width: 600px;
   height: 600px;
   background-color: #fff;
   background-image: url(../imgs/heart.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right 30px bottom;
   background-size: 600px;
   background-attachment: fixed;
   margin: 0 60px 0 20px;
@@ -269,14 +269,12 @@ footer ul {
    }
 
    .img {
-    width: 1000px;
+    width: 1100%;
     height: 600px;
     background-image: url(../imgs/icecream.png);
-    background-color: rgb(217, 241, 254);
-    background-repeat: no-repeat;
+    background-color: transparent;
+    /* 배경색 투명 */
     background-position: center;
-    background-size: 600px;
-    background-attachment: fixed;
     margin-left: none;
   }
   
