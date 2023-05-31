@@ -1,8 +1,8 @@
 .bg {
   position: relative;
-  width: 800px;
+  width: 900px;
   height: 500px;
-  background-color: rgb(45, 118, 255);
+  background-color: teal;
   margin: 0 auto;
 }
 
@@ -19,7 +19,7 @@
   background-image: url(./imgs/elements.png);
   z-index: 10;
   animation-name: move;
-  animation-duration: 1s;
+  animation-duration: 700ms;
   animation-iteration-count: infinite ;
   animation-direction: alternate;
 }
@@ -31,13 +31,13 @@
 
 @keyframes move {
   from {
-    right: -20px;
-    top: -20px;
+    right: -10px;
+    top: -10px;
   }
 
   to {
-    right: 10px;
-    top: 10px;
+    right: 5px;
+    top: 5px;
   }
 }
 
