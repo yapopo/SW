@@ -66,13 +66,13 @@
 .line-active span:first-child{
   background-color: red;
   box-shadow: 0 0 2px 1px red;
-  animation-delay: 500ms
 
 }
 
 .line-active span:last-child{
   background-color: blue;
   box-shadow: 0 0 2px 1px blue;
+  animation-delay: 0.5ms;
 
 }
 
