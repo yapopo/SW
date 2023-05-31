@@ -1,9 +1,9 @@
 .bg {
   position: relative;
-  width: 900px;
+  width: 70%;
   height: 500px;
   background-color: teal;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .img {
@@ -12,16 +12,18 @@
   height: 100%;
   background-position: left center;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 70%;
 }
 
 .move {
   background-image: url(./imgs/elements.png);
   z-index: 10;
-  animation-name: move;
-  animation-duration: 700ms;
+  animation: move 1.5s linear infinite;
+  /* animation-name: move;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite ;
-  animation-direction: alternate;
+  animation-timing-function: linear; */
+  /* animation-direction: alternate; */
 }
 
 .bg {
@@ -29,7 +31,7 @@
   background-image: url(./imgs/man.png);
 }
 
-@keyframes move {
+/* @keyframes move {
   from {
     right: -10px;
     top: -10px;
@@ -39,5 +41,20 @@
     right: 5px;
     top: 5px;
   }
+} */
+
+@keyframes move {
+  0%{
+    transform: translate(-15px, 0);
+  }
+
+  50% {
+    transform: translate(0, -15px);
+  }
+
+  100% {
+    transform: translate(-15px, 0);
+  }
+
 }
 
