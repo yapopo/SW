@@ -1,0 +1,87 @@
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  animation-name: move2;
+  /* animation이 재생될 시간 */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* animation 재생설정
+     nomal : 앞으로 재생
+     alternate : 앞 뒤 재생
+     reverse : 뒤로 재생
+     alternate-reverse : 뒤 앞 재생 */
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 300px;
+    background-color: aquamarine;
+  }
+
+  75% {
+    left: 450px;
+    background-color: brown;
+  }
+
+  100% {
+    left: 600px;
+    background-color: darkcyan;
+  }
+}
+
+@keyframes move2 {
+ from {
+  left: 0;
+  background-color: wheat;
+ }
+
+ to {
+  left: 100vh;
+  background-color: brown;
+ }
+}
+
+.line {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  animation-name: line-move;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite ;
+  animation-direction: alternate;
+
+}
+
+/* .line-active h2 {
+  display: inline-block;
+} */
+
+.line-active span:first-child{
+  background-color: red;
+  box-shadow: 0 0 2px 1px red;
+  animation-delay: 500ms
+
+}
+
+.line-active span:last-child{
+  background-color: blue;
+  box-shadow: 0 0 2px 1px blue;
+
+}
+
+@keyframes line-move {
+  from {
+    left: 0;
+  }
+
+  to {
+    left:174px
+  }
+}
