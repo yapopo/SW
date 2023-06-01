@@ -38,8 +38,20 @@ nav ul {
   font-weight: 700;
 }
 
+.gnb-list2 {
+  display: none;
+}
+
+.check-menu {
+  display: none;
+}
+
+
 .under-menu {
+  position: sticky;
+  top: 0;
   display: flex;
+  align-items: center;
   background-color: rgb(255, 34, 34);
   border-top: 3px solid yellow;
 }
@@ -53,9 +65,6 @@ nav ul {
   color: #fff;
 }
 
-.bg {
-  
-}
 
 .scroll-bg {
   height: 500px;
@@ -89,8 +98,10 @@ nav ul {
 }
 
 
+
 .box p {
   text-align: center;
+  font-weight: 700;
   padding: 20px 30px;
 }
 
@@ -184,3 +195,95 @@ footer ul {
   margin: 0 10px;
 }
 
+@media screen and (max-width:1200px) {
+
+  nav h1 img {
+    width: 50px;
+  }
+
+  .gnb-list {
+    display: none;
+  }
+
+  .check-menu {
+    display: block;
+  }
+
+  #check-menu {
+    display: none;
+  }
+
+  #check-menu:checked ~ .gnb-list { display: block; } 
+
+  .under-menu {
+    justify-content: center;
+  }
+
+  .menu-list {
+  padding: 20px;
+  }
+
+  .scroll-bg {
+    height: 400px;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .box {
+    width: 80%;
+    display: block;
+    margin-right: 0;
+    margin: 30px auto;
+  }
+
+  .box:last-child {
+    margin: 0 auto;
+  }
+
+  .box p {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .btns {
+    border-top: 3px solid yellow;
+    padding: 10px 0;
+  }
+  
+  .btns-img {
+    width: 70% ;
+  }
+  
+  .btns-img li img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btns-name {
+    width: 70%;
+    justify-content: space-between;
+  }
+  
+  .btns-name li {
+    width: 80px;
+  }
+
+  .ft {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .contact {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 30px;
+  }
+  
+
+}
