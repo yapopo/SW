@@ -53,9 +53,9 @@ nav ul {
   color: #fff;
 }
 
-/* .bg {
-  height: 600px;
-} */
+.bg {
+  
+}
 
 .scroll-bg {
   height: 500px;
@@ -67,16 +67,26 @@ nav ul {
 }
 
 .items {
-  width: 80%;
+  width: 70%;
   margin: 50px auto;
+}
+
+.line {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .box {
   display: inline-block;
   border-radius: 10px;
   box-shadow: 2px 2px 3px #ccc;
+  margin-right: 20px;
 }
 
+.box:last-child {
+  margin-right: 0;
+}
 
 
 .box p {
@@ -135,5 +145,42 @@ nav ul {
   text-align: center;
   width: 150px;
   color: #000;
+}
+
+footer {
+  background-color: rgb(255, 34, 34);
+}
+
+footer ul a {
+  color: #fff;
+}
+
+footer ul {
+  padding: 20px;
+}
+
+.ft {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 30px;
+}
+
+.contact i {
+  width: 30px;
+  color: rgb(255, 34, 34) ;
+  font-size: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 10px;
 }
 
