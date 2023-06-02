@@ -12,6 +12,14 @@ a {
   text-decoration: none;
 }
 
+html,body,.wrapper {
+  height: 100%;
+}
+
+header {
+  position: relative;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -19,7 +27,6 @@ nav {
   margin: 0 auto;
   width: 95%;
 }
-
 
 nav h1 img {
   width: 70px;
@@ -38,14 +45,28 @@ nav ul {
   font-weight: 700;
 }
 
-.gnb-list2 {
-  display: none;
-}
-
 .check-menu {
   display: none;
 }
 
+.gnb-list2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  text-align: center;
+  z-index: 1;
+  padding-top: 80px;
+}
+
+.check-menu i {
+  font-size: 20px;
+}
+
+/* header css */
 
 .under-menu {
   position: sticky;
@@ -60,7 +81,6 @@ nav ul {
   padding: 25px;
 }
 
-
 .menu-list a {
   color: #fff;
 }
@@ -72,8 +92,9 @@ nav ul {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
+
 
 .items {
   width: 70%;
@@ -88,6 +109,7 @@ nav ul {
 
 .box {
   display: inline-block;
+  max-width: 280px;
   border-radius: 10px;
   box-shadow: 2px 2px 3px #ccc;
   margin-right: 20px;
@@ -96,8 +118,6 @@ nav ul {
 .box:last-child {
   margin-right: 0;
 }
-
-
 
 .box p {
   text-align: center;
@@ -170,8 +190,11 @@ footer ul {
   padding: 20px;
 }
 
+footer ul li a:hover {
+  color: yellow;
+}
+
 .ft {
-  position: relative;
   display: flex;
   align-items: center;
   width: 90%;
@@ -179,20 +202,26 @@ footer ul {
 }
 
 .contact {
-  position: absolute;
+  margin-left: auto;
   display: flex;
   align-items: center;
-  right: 30px;
 }
 
 .contact i {
   width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
   color: rgb(255, 34, 34) ;
-  font-size: 30px;
+  font-size: 25px;
   background-color: #fff;
+  padding: 15px;
   border-radius: 50%;
-  padding: 10px;
-  margin: 0 10px;
+  margin-right: 15px;
+}
+
+.contact li:last-child i {
+  margin-right: 0;
 }
 
 @media screen and (max-width:1200px) {
@@ -208,12 +237,14 @@ footer ul {
   .check-menu {
     display: block;
   }
+ 
+ #check-menu {
+  display: none;
+}
 
-  #check-menu {
-    display: none;
-  }
+ #check-menu:checked .gnb-list2 { 
+  display: block;} 
 
-  #check-menu:checked ~ .gnb-list { display: block; } 
 
   .under-menu {
     justify-content: center;
@@ -232,7 +263,7 @@ footer ul {
   }
 
   .box {
-    width: 80%;
+    max-width: 80%;
     display: block;
     margin-right: 0;
     margin: 30px auto;
@@ -243,19 +274,18 @@ footer ul {
   }
 
   .box p {
-    max-width: 400px;
+    max-width: 50%;
     margin: 0 auto;
   }
 
   .btns {
-    border-top: 3px solid yellow;
     padding: 10px 0;
   }
-  
+
   .btns-img {
     width: 70% ;
   }
-  
+
   .btns-img li img {
     width: 80px;
     height: 80px;
@@ -265,25 +295,103 @@ footer ul {
     width: 70%;
     justify-content: space-between;
   }
-  
+
   .btns-name li {
     width: 80px;
   }
 
+  footer ul {
+    padding: 15px;
+  }
+  
   .ft {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
+    display: block;
+  }
+
+  .list1 {
+    float: left;
+  }
+
+  .list2 {
+    float: right;
   }
   
   .contact {
-    position: absolute;
+    clear: both;
     display: flex;
+    justify-content: center;
     align-items: center;
-    right: 30px;
   }
   
+  .contact i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 20px;
+    padding: 15px;
+  }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+  .wrapper {
+    min-width: 450px;
+  }
+
+  .scroll-bg {
+    height: 250px;
+  }
+
+  .items {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .box {
+    min-width: 400px
+  }
+
+  .btns-img {
+    width: 60% ;
+  }
+
+  .btns-img li img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .btns-name {
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .btns-name li {
+    width: 60px;
+  }
+
+  .btns-name li {
+    font-size: 12px;
+  }
+
+  footer ul {
+    padding: 0;
+  }
+
+  .list1 {
+    clear: both;
+    margin-top: 20px;
+  }
+
+  .list2 {
+    clear: both;
+    text-align: right;
+  }
+  
+  .contact {
+    padding: 20px 0;
+  }
+
 
 }
