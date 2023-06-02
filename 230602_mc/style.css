@@ -132,3 +132,35 @@ nav {
   text-align: center;
   font-weight: bold;
 }
+
+.mac-story-box {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background-color: #fff;
+  margin-top: 50px;
+  border-top: 3px solid rgb(255,213,23);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.mac-story-list {
+  display: flex;
+  justify-content: center;
+}
+
+.mac-story-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
+.mac-story-item {
+  padding: 0 20px;
+}
+
+.mac-story-item p {
+  font-weight: bold;
+}
