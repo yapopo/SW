@@ -46,6 +46,9 @@ nav ul {
 }
 
 .check-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   display: none;
 }
 
@@ -242,7 +245,7 @@ footer ul li a:hover {
   display: none;
 }
 
- #check-menu:checked .gnb-list2 { 
+ #check-menu:checked ~ .gnb-list2 { 
   display: block;} 
 
 
