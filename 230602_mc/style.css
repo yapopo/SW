@@ -82,6 +82,9 @@ nav {
 }
 
 .food-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 90%;
   margin: 80px auto 0 auto;
 }
