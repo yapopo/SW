@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.sm-only {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.logo img {
+  width: 70px;
+}
+
+.gnb-list {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.gnb-item a {
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 300ms;
+}
+
+.gnb-item a:hover {
+  color: red;
+}
