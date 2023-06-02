@@ -53,6 +53,7 @@ nav {
 .lnb-wrapper {
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 .lnb-list {
@@ -70,4 +71,61 @@ nav {
 .lnb-item a {
   padding: 0 20px;
   color: #fff;
+}
+
+.bg {
+  height: 600px;
+  background-image: url(./imgs/back.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.food-box {
+  width: 90%;
+  margin: 80px auto 0 auto;
+}
+
+.food-box-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.food-box-list:first-child {
+  margin-top: 0;
+}
+
+.food-box-item:last-child {
+  margin-right: 0;
+}
+
+.food-box-item {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #bbb;
+  margin-right: 30px;
+  overflow: hidden;
+}
+
+.food-box-item img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.food-box-item a {
+  transition: opacity 500ms ease-in-out;
+}
+
+.food-box-item a:hover {
+  opacity: 0.7;
+}
+
+.food-box-text {
+  width: 80%;
+  padding: 10px 0;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
 }
