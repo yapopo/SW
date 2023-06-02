@@ -49,3 +49,25 @@ nav {
 .gnb-item a:hover {
   color: red;
 }
+
+.lnb-wrapper {
+  position: sticky;
+  top: 0;
+}
+
+.lnb-list {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  background-color: rgb(235, 27, 27);
+  border-top: 3px solid rgb(255,213,23);
+}
+
+.lnb-item:first-child {
+  margin-left: 20px;
+}
+
+.lnb-item a {
+  padding: 0 20px;
+  color: #fff;
+}
