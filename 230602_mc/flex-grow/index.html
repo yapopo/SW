@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex-grow</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex-list {
+      display: flex;
+      background-color: #333;
+      padding: 30px 0;
+    }
+
+    .flex-item {
+      width: 200px;
+      height: 200px;
+    }
+
+    .flex-item:first-child {
+      background-color: red;
+    }
+
+    .flex-item:nth-child(2) {
+      background-color: yellow;
+    }
+
+    .flex-item:nth-child(3) {
+      background-color: yellowgreen;
+    }
+
+    .flex-item:last-child {
+      flex-grow: 2;
+      background-color: green;
+    }
+
+    .selector p, span {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border: 2px solid #000;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    /* .selector p:last-child {
+      background-color: aquamarine;
+    } */
+    /* 부모 안에서 모든 요소들 중에 첫번째, 마지막 요소를 선택한다 */
+
+    .selector p:last-of-type {
+      background-color: aqua;
+    }
+
+    .selector span:first-of-type {
+      background-color: bisque;
+    }
+    /* 부모 안에서 같은 요소중에 마지막 요소를 선택한다 */
+
+    .selector span:nth-of-type(2) {
+      background-color: coral;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <div class="flex-list">
+      <div class="flex-item">box1</div>
+      <div class="flex-item">box2</div>
+      <div class="flex-item">box3</div>
+      <div class="flex-item">box4</div>
+    </div>
+
+    <div class="selector">
+      <p>p</p>
+      <span>span</span>
+      <p>p</p>
+      <p>p</p>
+      <span>span</span>
+      <p>p</p>
+      <span>span</span>
+    </div>
+  </div>
+</body>
+</html>
