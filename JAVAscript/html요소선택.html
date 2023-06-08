@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <h1 id="spiderman">스파이더맨 어크로스 더 유니버스</h1>
+    <button id="btn" type="button">CHANGE</button>
+  </div>
+  <script>
+    // document.getElementById('spiderman').innerHTML = 'SPIDERMAN';
+    // document.getElementById('spiderman').style.color = 'red';
+
+    const change = document.querySelector('#btn');
+    const spiderman = document.querySelector('#spiderman')
+
+    change.addEventListener('click',function(){
+      spiderman.innerHTML = 'SPIDER-MAN'
+      spiderman.style.color = 'red'
+    });
+
+  </script>
+</body>
+</html>
