@@ -5,16 +5,18 @@
 
 .alert {
   display: none;
+  justify-content: space-between;
+  align-items: center;
   background-color:skyblue;
-  padding: 20px 0;
+  padding: 20px;
   margin: 10px 10px 0 10px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .alert p {
   color: #fff;
   margin-left: 20px;
-  flex-grow: 1;
 }
 
 #close-btn {
