@@ -51,7 +51,7 @@
       </div>
 
         <div class="search lg-only">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
           <input id="search" type="text" placeholder="스토어 검색">
         </div>
 
@@ -64,17 +64,13 @@
         </div>
 
         <div class="bag sm-hidden">
-          <a href="">
-            <p class="lg-only">장바구니</p>
-            <i class="fa-solid fa-cart-shopping md-only"></i>
-          </a>
+          <a href="" class="md-only"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="" class="lg-only"><p>장바구니</p></a>
         </div>
 
         <div class="logout sm-hidden">
-          <a href="">
-            <p class="lg-only">로그아웃</p>
-            <i class="fa-solid fa-right-to-bracket md-only"></i>
-          </a>
+          <a href="" class="md-only"><i class="fa-solid fa-right-to-bracket"></i></a>
+          <a href="" class="lg-only"><p>로그아웃</p></a>
         </div>
 
       </nav>
@@ -93,8 +89,28 @@
       <div class="bg"></div>
     </main>
 
+    <aside class="sidebar sm-only">
+      <div class="sdbar-top">
+        <img src="./imgs/user.jpeg" alt="user img">
+        <p>레고레고</p>
+      </div>
 
-  </div>
+      <div class="sdbar">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>레고 제품 쇼핑</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="sdbar">
+        <i class="fa-regular fa-face-smile"></i>
+        <p>레고 브랜드 소개</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="sdbar">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>고객 지원</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </aside>
   <script src="./javascript/sdbar.js"></script>
   <script src="./javascript/sdbarDrawer.js"></script>
 </body>
