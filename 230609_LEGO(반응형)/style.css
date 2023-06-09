@@ -3,3 +3,187 @@
   margin: 0;
   font-family: 'Jua', sans-serif;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: rgb(255, 204, 0);
+}
+
+nav > div {
+  display: flex;
+}
+
+.lg-only {
+  display: none;
+}
+
+.md-only {
+  display: none;
+}
+
+.sm-hidden {
+  display: none;
+}
+
+.bar , .search-icon {
+  font-size: 30px;
+}
+
+.bar i {
+  color: rgb(222, 0, 0);
+}
+
+.logo {
+  display: flex;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.search {
+  position: relative;
+}
+
+.search i {
+  font-size: 14px;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  color: gray;
+
+}
+
+#search {
+  border: none;
+  width: 150px;
+  padding: 7px 0 7px 30px;
+  font-size: 16px;
+}
+
+.user img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.lnb-list {
+  display: flex;
+  background-color: #fff;
+}
+
+.lnb-item {
+  padding: 15px 10px;
+  font-weight: bold;
+}
+
+
+.bg {
+  height: 400px;
+  background-image: url(./imgs/lego.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width:768px) {
+
+  .sm-only {
+    display: none;
+  }
+
+  .sm-hidden {
+    display: block;
+  }
+
+  .md-only {
+    display: block;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .gnb {
+    flex-grow: 1;
+  }
+
+  .gnb-item {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .search-icon , .user , .bag, .logout {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .search-icon {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .lnb-item {
+    padding: 15px;
+  }
+
+  .bg {
+    height: 500px;
+  }
+
+  
+}
+
+@media screen and (min-width:1200px) {
+
+  .lg-only {
+    display: block;
+  }
+
+  .md-only {
+    display: none;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .gnb-item {
+    padding: 20px;
+    font-size: 22px;
+  }
+
+  .lnb-item {
+    padding: 20px;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  .user img {
+    width: 40px;
+  }
+
+  .bg {
+    height: 600px;
+  }
+}

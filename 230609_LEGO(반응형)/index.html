@@ -27,52 +27,56 @@
 <body>
   <div class="wrapper">
     <header>
-
-      <div class="ham m-only">
-        <a href=""><i class="fa-solid fa-bars"></i></a>
-      </div>
-
-      <h1 class="logo">
-        <img src="./imgs/logo.png" alt="로고 이미지">
-      </h1>
-
       <nav>
-       <div class="gnb">
-        <ul class="gnb-list dt-only" >
+
+        <div class="bar sm-only">
+          <a href=""><i class="fa-solid fa-bars"></i></a>
+        </div>
+  
+        <h1 class="logo">
+          <img src="./imgs/logo.png" alt="로고 이미지">
+        </h1>
+
+        <div class="search-icon sm-only">
+          <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+
+       <div class="gnb sm-hidden">
+        <ul class="gnb-list">
           <li class="gnb-item"><a href="">제품쇼핑</a></li>
           <li class="gnb-item"><a href="">브랜드소개</a></li>
           <li class="gnb-item"><a href="">고객지원</a></li>
           <li class="gnb-item"><a href="">세일</a></li>
         </ul>
+      </div>
 
-        <div class="search-icon">
+        <div class="search lg-only">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="search" type="text" placeholder="스토어 검색">
+        </div>
+
+        <div class="search-icon md-only">
           <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
 
-        <div class="search d-only">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="스토어 검색">
-        </div>
-
-        <div class="user-img">
+        <div class="user sm-hidden">
           <a href=""><img src="./imgs/user.jpeg" alt="user img"></a>
         </div>
 
-        <div class="bag">
+        <div class="bag sm-hidden">
           <a href="">
-            <p class="d-only">장바구니</p>
-            <i class="fa-solid fa-cart-shopping t-only"></i>
+            <p class="lg-only">장바구니</p>
+            <i class="fa-solid fa-cart-shopping md-only"></i>
           </a>
         </div>
 
-        <div class="logout">
+        <div class="logout sm-hidden">
           <a href="">
-            <p class="d-only">로그아웃</p>
-            <i class="fa-solid fa-right-to-bracket t-only"></i>
+            <p class="lg-only">로그아웃</p>
+            <i class="fa-solid fa-right-to-bracket md-only"></i>
           </a>
         </div>
 
-       </div>
       </nav>
 
       <ul class="lnb-list">
