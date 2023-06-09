@@ -107,6 +107,8 @@ nav > div {
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
@@ -114,6 +116,7 @@ nav > div {
   height: 100vh;
   background-color: #fff;
   padding: 20px 50px;
+  z-index: 11;
 }
 
 .sdbar-top {
@@ -144,6 +147,12 @@ nav > div {
 .sdbar p {
   margin-left: 10px;
   flex-grow: 1;
+}
+
+.sdbar-item a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 0;
 }
 
 
