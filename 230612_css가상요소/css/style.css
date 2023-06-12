@@ -1,0 +1,87 @@
+.apple::after {
+  content: "spiderman";
+  color : green;
+}
+
+.apple::before {
+  content: "Oh,my";
+}
+
+/* 가상요소는 닫을 수 있는 요소에만 쓰일 수 있다 */
+
+#bill {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+#bill td, th {
+  border: 1px solid #000;
+  padding: 0.3em 1em;
+}
+/* em : 설정된 표준폰트 사이즈*/
+
+th {
+  background-color: #aaa;
+}
+
+#bill td:nth-of-type(2)::after {
+  content: "원";
+  margin-left: 0.2em;
+  font-size: 0.9em;
+  color: #777;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 10;
+  text-align: center;
+}
+
+#modal-w {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  width: calc(100%);
+  /* calc에서는 연산자 앞뒤로 꼭 띄어쓰기가 필요함 */
+  max-width: 450px;
+  border-radius: 4px;
+  box-shadow: 3px 5px 10px rgba(0,0,0,0.2);
+}
+
+#modal-cl-btn {
+  position: relative;
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#modal-cl-btn::before,
+#modal-cl-btn::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%,-50%); */
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+}
+
+#modal-cl-btn::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+#modal-cl-btn::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
