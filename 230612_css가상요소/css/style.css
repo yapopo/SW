@@ -1,3 +1,12 @@
+.box {
+  width: 20%;
+  height: 1.5em;
+  background-color: aquamarine;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+
 .apple::after {
   content: "spiderman";
   color : green;
@@ -76,6 +85,7 @@ th {
   width: 20px;
   height: 2px;
   background-color: #000;
+  transition: all 400ms ease-in-out;
 }
 
 #modal-cl-btn::before {
@@ -85,3 +95,15 @@ th {
 #modal-cl-btn::after {
   transform: translate(-50%,-50%) rotate(-45deg);
 }
+
+#modal-cl-btn:hover::before {
+  transform: translate(-50%,-50%) rotate(0);
+  margin-top: -5px;
+}
+
+#modal-cl-btn:hover::after {
+  transform: translate(-50%,-50%) rotate(0);
+  margin-top: 5px;
+}
+
+
