@@ -172,6 +172,38 @@ var house = [
 // }alert(result);
 
 
+var filename = [
+  ["ceo.html","map.html","prize.html"],
+  ["app.html","mobile.html","memory.html"],
+];
+
+
+var menuname = ["회사소개","제품소개"]
+var menuname2 = [
+  ["인사말","오시는길","수상실적"],
+  ["일반가전","모바일","메모리"]
+];
+
+var currentname = location.href;
+currentname = currentname.split("/");
+
+var len = currentname.length;
+currentname = currentname[len-1];
+
+var name1;
+var name2;
+
+for(i=0; i<filename[0].length; i++){
+  for(j=0; j<filename[i].length; j++){
+    if(currentname == filename[i][j]){
+      name1 = i;
+      name2 = j;
+      break;
+    }
+  }
+}
+alert(name1+","+name2);
+
 
 
 
