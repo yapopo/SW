@@ -52,19 +52,19 @@ var korean = 52;
 // }
 
 
-if(foriner){
-  if((korean >= 60 || english >=60) && credit >=120 && certificate){
-    alert("졸업 축하합니다!");
-  }else{
-    alert("졸업 요건이 충족되지 않았습니다");
-  }
-}else{
-  if(english >= 60 && credit >=120 && certificate){
-    alert("졸업 축하합니다!");
-  }else{
-    alert("졸업 요건이 충족되지 않았습니다");
-  }
-};
+// if(foriner){
+//   if((korean >= 60 || english >=60) && credit >=120 && certificate){
+//     alert("졸업 축하합니다!");
+//   }else{
+//     alert("졸업 요건이 충족되지 않았습니다");
+//   }
+// }else{
+//   if(english >= 60 && credit >=120 && certificate){
+//     alert("졸업 축하합니다!");
+//   }else{
+//     alert("졸업 요건이 충족되지 않았습니다");
+//   }
+// };
 
 
 
@@ -123,29 +123,59 @@ var house = [
 // var area = 21;
 // var shop = 1.1;
 
-if(house[3].company <= 10 && 
-  house[3].park && house[3].el &&
-  (house[3].area >= 20 || house[3].shop <= 1)){
-  alert("계약하겠습니다!!!");
-}else{
-  alert("다른 집 볼게요...");
-};
+// if(house[3].company <= 10 && 
+//   house[3].park && house[3].el &&
+//   (house[3].area >= 20 || house[3].shop <= 1)){
+//   alert("계약하겠습니다!!!");
+// }else{
+//   alert("다른 집 볼게요...");
+// };
 
-console.log(house)
+// console.log(house)
 
 
 
-var sum = 0;
-for(i=1; i<=100; i++){
-  sum = sum + i
-}alert(sum);
+// var sum = 0;
+// for(i=1; i<=100; i++){
+//   sum = sum + i
+// }alert(sum);
 
 
 // if(조건절){}
 //  && : 앤드 조건
 // ((||)) : or 조건
 
-var plus = 0;
-for(i=5; i<=10; i++){
-  plus = plus +i
-}alert(plus);
+// var plus = 0;
+// for(i=5; i<=10; i++){
+//   plus = plus +i
+// }alert(plus);
+
+
+// var sub = "";
+// for(i=10; i>=5; i--){
+//   if(i != 5){
+//     sub = sub + i + "/"
+//   }else{
+//     sub = sub + i
+//   } 
+// }alert(sub);
+
+
+
+// var result = "";
+// for(i=1; i<=100; i++){
+//   if(i%3 == 0){
+//     continue;
+//   }else{
+//     result = result + i + " ";
+//   }
+// }alert(result);
+
+
+
+
+
+
+
+
+
