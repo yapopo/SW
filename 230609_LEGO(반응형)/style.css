@@ -114,9 +114,10 @@ nav > div {
   left: 0;
   width: 200px;
   height: 100vh;
-  background-color: #fff;
+  overflow: scroll;
+  background-color: white;
   padding: 20px 50px;
-  z-index: 11;
+  z-index: 12;
   transform: translateX(-300px);
   transition: transform 300ms ease-in-out;
 }
@@ -150,13 +151,19 @@ nav > div {
   font-size: 30px;
 }
 
+.sdbar i {
+  transition: color 300ms ease-in-out;
+}
+
 .sdbar p {
   margin-left: 10px;
   flex-grow: 1;
 }
 
 .sdbar-list {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms ease-in-out;
 }
 
 .sdbar-item a {
@@ -270,4 +277,3 @@ nav > div {
     height: 600px;
   }
 }
-/* git push */
