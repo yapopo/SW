@@ -16,18 +16,50 @@ const btn2 = document.getElementById("btn2")
 
 // #number의 element도 변수로 저장
 
-const number = document.getElementById("number")
+const content = document.getElementById("content")
 
 let inC = 0
 
+const money = 100
+
 btn.addEventListener("click" , function(){
   inC = inC + 1;
-  number.textContent = inC
-  console.log(number)
+  content.textContent = inC
+  console.log(content)
 })
 
-btn2.addEventListener("click" , function(){
-  inC = inC - 1;
-  number.textContent = inC
-  console.log(number)
+// btn2.addEventListener("click" , function(){
+//   inC = inC - 1;
+//   number.textContent = inC
+//   console.log(number)
+// })
+
+// btn2.addEventListener("click", () => {
+//   inC = inC - 1;
+//   content.textContent = inC
+//   inc(inC)
+// })
+
+// function inc(content) {
+//   return console.log(content)
+// }
+
+btn2.addEventListener("click", () => {
+  inC(originNumber,content,false);
 })
+
+function inC(number, content, check) {
+  if(check === true){
+    number = number + money;
+  }else {
+    if(number > 0)
+    number = number - money;
+  }
+
+  content.textContent = number
+  return originNumber = number
+}
+
+
+
+
