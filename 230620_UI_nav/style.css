@@ -3,3 +3,49 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(143, 63%, 79%);
+}
+
+.site-header {
+  width: 800px;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 3px 1px rgba(0,0,0,0.2), 0 3px 10px rgba(0,0,0,0.4);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding: 1rem;
+  /* 최상단의 부모의 em을 참고함 : rem */
+  cursor: pointer;
+  user-select: none;
+  /* 사용자가 내용을 선택할 수 없도록 만드는 기능 */
+}
+
+li.active {
+  background-color: rgb(34, 122, 93);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
