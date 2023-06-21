@@ -1,6 +1,6 @@
-/* :root {
+:root {
   --size: 36px
-} */
+}
 
 
 
@@ -21,13 +21,51 @@ html,body {
   background-color: salmon;
 }
 
-.pointer {
-  --size: 36px
+#pointer {
+  /* --size: 36px; */
   position: fixed;
   top: 0;
   left: 0;
   width: var(--size);
   height: var(--size);
-  border-radius: 50%;
+  border-radius: var(--size);
   border: 1px solid #fff;
+  cursor: none;
+}
+
+#pointer::after {
+  --size : 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) ;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: #fff;
+  content: '';
+}
+
+#bubble {
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#pointer:active #bubble {
+  opacity: 0;
+  animation: bubble 500ms ease-in-out;
+}
+
+@keyframes bubble {
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
