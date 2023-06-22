@@ -20,3 +20,12 @@ main {
 #title {
   font-size: 3rem;
 }
+
+.on {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.on.active {
+  opacity: 1;
+}
