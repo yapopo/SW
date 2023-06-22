@@ -16,6 +16,7 @@ html,body {
 }
 
 #app {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: salmon;
@@ -46,17 +47,22 @@ html,body {
   content: '';
 }
 
-#bubble {
+.bubble {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: block;
   width: var(--size);
   height: var(--size);
-  background-color: #fff;
+  /* background-color: #fff; */
+  border: 1px solid #fff;
   border-radius: 50%;
+  opacity: 0;
 }
 
-#pointer:active #bubble {
-  opacity: 0;
-  animation: bubble 500ms ease-in-out;
+.bubble.active {
+  opacity: 1;
+  animation: bubble 400ms ease-out forwards;
 }
 
 @keyframes bubble {
@@ -64,8 +70,13 @@ html,body {
     opacity: 0;
     transform: scale(0);
   }
-  100%{
+
+  50% {
     opacity: 1;
-    transform: scale(1.2);
+  }
+
+  100%{
+    opacity: 0;
+    transform: scale(1.5);
   }
 }
