@@ -5,9 +5,12 @@ const number = document.querySelector(".number")
 const start = document.getElementById("start")
 const stop = document.getElementById("stop")
 
+const list = document.getElementById("list")
+
 let timerId;
 
 start.addEventListener("click", () => {
+  index = 0;
   timerId = setInterval(() => {
     index++
     number.textContent = index
@@ -16,6 +19,9 @@ start.addEventListener("click", () => {
 
 stop.addEventListener("click", ()=> {
   clearInterval(timerId)
+  const li = document.createElement("li")
+  li.textContent = index
+  list.appendChild(li)
 })
 
 
