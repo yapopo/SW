@@ -14,7 +14,7 @@ start.addEventListener("click", () => {
   timerId = setInterval(() => {
     index++
     number.textContent = index
-  },300)
+  },100)
 })
 
 stop.addEventListener("click", ()=> {
