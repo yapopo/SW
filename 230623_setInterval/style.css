@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jua', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  /* width: 100%; */
+  text-align: center;
+  padding: 2rem;
+}
+
+button {
+  border: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 0 0 0 3px  rgb(146, 162, 255);
+}
+
+button#start {
+  background-color: rgb(127, 146, 255);
+  color: #fff;
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: 700;
+}
