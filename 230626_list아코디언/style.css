@@ -9,6 +9,10 @@ html, body {
   height: 100%;
 }
 
+#app {
+  padding: 1rem;
+}
+
 .list {
   list-style: none;
   display: flex;
@@ -16,4 +20,29 @@ html, body {
 }
 .list__item {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 0 1px skyblue;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.list__item.active {
+  box-shadow: 0 0 0 3px blueviolet;
+}
+.list__item.active .list__content {
+  display: flex;
+}
+.list__btn {
+  display: flex;
+  border: 0;
+  padding: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+.list__btn:active {
+  background-color: #ddd;
+}
+.list__content {
+  display: none;
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */
