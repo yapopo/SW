@@ -18,9 +18,12 @@ minus.addEventListener("click" , () => {
 
 colorChange.addEventListener("click", () => {
   // title.classList.toggle("active")
-  if(title.classList.contains("active")){
-    title.classList.remove("active")
-  }else{
-    title.classList.add("active")
-  }
+  setTimeout(()=> {
+    if(title.classList.contains("active")){
+        title.classList.remove("active")
+    }else{
+        title.classList.add("active")
+    }
+  },1000)
 })
+
