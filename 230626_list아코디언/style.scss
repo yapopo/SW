@@ -1,4 +1,4 @@
-@import "list.scss";
+
 
 * {
   padding: 0;
@@ -14,4 +14,6 @@ html, body {
 #app {
   padding: 1rem;
 }
+
+@import "list.scss";
 

@@ -14,6 +14,9 @@
       .list__content{
         display: flex;
       }
+      .list__btn .icon-up{
+        transform: rotate(0deg);
+      }
     }
   }
   &__btn{
@@ -23,6 +26,10 @@
     padding: 1rem;
     background-color: #fff;
     cursor: pointer;
+    transition: all 400ms ease-in-out;
+    .icon-up {
+      transform: rotate(180deg);
+    }
     &:active{
       background-color: #ddd;
     }
