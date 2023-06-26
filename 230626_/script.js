@@ -1,10 +1,16 @@
-const startBtn = document.getElementById("start")
-const stopBtn = document.getElementById("stop")
+const title = document.getElementById("title")
 
-startBtn.addEventListener("click" , () => {
-  console.log(startBtn.innerHTML)
+const plus = document.getElementById("plus")
+const minus = document.getElementById("minus")
+
+let index = 16;
+
+plus.addEventListener("click" , () => {
+  index++
+  title.style.fontSize = `${index + 1}px`
 })
 
-stopBtn.addEventListener("click" , () => {
-  console.log(stopBtn.innerHTML)
+minus.addEventListener("click" , () => {
+  index--
+  title.style.fontSize = `${index - 1}px`
 })
