@@ -18,6 +18,7 @@ const addList = () => {
     li.classList.add("list-item")
     list.appendChild(li)
     input.value = ''
+    saveData()
   }
 
 input.addEventListener("keydown", (event) => {
@@ -42,3 +43,12 @@ list.addEventListener("click", (event)=> {
   // console.log(list)
 })
 
+const saveData = () => {
+  localStorage.setItem('list', list.innerHTML) 
+}
+
+const loadData = () => {
+  list.innerHTML = localStorage.getItem("list")
+}
+
+loadData()
