@@ -9,11 +9,11 @@ html, body {
   height: 100%;
 }
 
-.list{
+.list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  &__item{
-    display: flex;
-  }
 }
+.list__item {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */
