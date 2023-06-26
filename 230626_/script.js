@@ -2,8 +2,9 @@ const title = document.getElementById("title")
 
 const plus = document.getElementById("plus")
 const minus = document.getElementById("minus")
+const colorChange = document.getElementById("change")
 
-let index = 32;
+let index = 16;
 
 plus.addEventListener("click" , () => {
   index++
@@ -13,4 +14,13 @@ plus.addEventListener("click" , () => {
 minus.addEventListener("click" , () => {
   index--
   title.style.fontSize = `${index}px`
+})
+
+colorChange.addEventListener("click", () => {
+  // title.classList.toggle("active")
+  if(title.classList.contains("active")){
+    title.classList.remove("active")
+  }else{
+    title.classList.add("active")
+  }
 })
