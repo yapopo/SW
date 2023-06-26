@@ -11,6 +11,7 @@ html, body {
 
 #title {
   font-size: 16px;
+  transition: color 400ms ease;
 }
 
 #title.active {
