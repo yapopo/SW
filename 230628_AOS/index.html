@@ -4,44 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>AOS</title>
 </head>
 <body>
     <main>
       <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <p data-aos="fade-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
            Repellendus, exercitationem explicabo illum vero tenetur 
            voluptatibus et ea dolore neque omnis deleniti error eos aliquid.
            Necessitatibus hic ipsum provident velit laborum!</p>
       </section>
       
       <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <p data-aos="fade-left"
+        data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
            Repellendus, exercitationem explicabo illum vero tenetur 
            voluptatibus et ea dolore neque omnis deleniti error eos aliquid.
            Necessitatibus hic ipsum provident velit laborum!</p>
       </section>
 
       <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <p data-aos="flip-right"
+        data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit.
            Repellendus, exercitationem explicabo illum vero tenetur 
            voluptatibus et ea dolore neque omnis deleniti error eos aliquid.
            Necessitatibus hic ipsum provident velit laborum!</p>
       </section>
 
       <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <p data-aos="flip-up"
+        data-aos-duration="700">Lorem ipsum dolor sit amet consectetur adipisicing elit.
            Repellendus, exercitationem explicabo illum vero tenetur 
            voluptatibus et ea dolore neque omnis deleniti error eos aliquid.
            Necessitatibus hic ipsum provident velit laborum!</p>
       </section>
 
       <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <p data-aos="zoom-in-up"
+        data-aos-duration="3000">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
            Repellendus, exercitationem explicabo illum vero tenetur 
            voluptatibus et ea dolore neque omnis deleniti error eos aliquid.
            Necessitatibus hic ipsum provident velit laborum!</p>
       </section>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 700
+        });
+      </script>
     </main>
 </body>
 </html>
