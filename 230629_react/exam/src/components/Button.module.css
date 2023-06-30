@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  background-color: transparent;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.button.primary {
+  background-color: yellowgreen ;
+}
+
+.button.secondary {
+  background-color: salmon;
+}

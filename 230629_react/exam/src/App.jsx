@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import './App.css'
+// import Button from './components/Button.jsx'
+// import Heading from './components/Heading'
+// import Flex from './components/Flex'
+
+// function App() { 
+//   return (    
+//     <>      
+//       <Flex>       
+//         <Heading title="안녕하세요"/>
+//         <Button name="1번버튼" primary/>
+//         <Button name="2번버튼" secondary/>
+//         <Button name="3번버튼" />
+//       </Flex>
+//     </>
+//   )
+// }
+
+// export default App
+
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Flex from './components/Flex'
 
+const images = [
+  {id : 1, url :'/icecream1.jpeg', title : '초코아이스크림'},
+  {id : 2, url :'/icecream2.jpeg', title : '바닐라아이스크림'},
+  {id : 3, url :'/icecream3.jpeg', title : '딸기아이스크림'},
+]
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Flex>
+      {images.map(image => (
+      <div key={image.id}>
+      <figure className='image-wrapper' >
+        <img className='image'src={image.url} alt={image.title}/>
+       </figure>
+
+       <h2>{image.title}</h2>
+       </div>
+       ))}
+    </Flex>
     </>
   )
 }
-
-export default App
