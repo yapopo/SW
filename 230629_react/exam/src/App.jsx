@@ -22,6 +22,8 @@ import './App.css'
 
 import Flex from './components/Flex'
 
+import Image from './components/Image'
+
 const images = [
   {id : 1, url :'/icecream1.jpeg', title : '초코아이스크림'},
   {id : 2, url :'/icecream2.jpeg', title : '바닐라아이스크림'},
@@ -33,9 +35,8 @@ export default function App() {
     <Flex>
       {images.map(image => (
       <div key={image.id}>
-      <figure className='image-wrapper' >
-        <img className='image'src={image.url} alt={image.title}/>
-       </figure>
+
+        <Image url={image.url} title={image.title}/>
 
        <h2>{image.title}</h2>
        </div>
