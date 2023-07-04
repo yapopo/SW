@@ -2,7 +2,7 @@ const barIcon = document.getElementById('bar');
 const sidebar = document.getElementById('sidebar');
 const sdbarOverlay = document.getElementById('overlay');
 
-console.log(barIcon,sidebar,sdbarOverlay);
+// console.log(barIcon,sidebar,sdbarOverlay);
 
 // barIcon.addEventListener('click', function() {
 

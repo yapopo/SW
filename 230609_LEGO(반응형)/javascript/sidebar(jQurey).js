@@ -2,7 +2,7 @@ const barIcon = $('#bar');
 const sidebar = $('#sidebar');
 const sdbarOverlay = $('#overlay');
 
-console.log(barIcon,sidebar,sdbarOverlay)
+// console.log(barIcon,sidebar,sdbarOverlay)
 
 $(barIcon).click(function(){
   $(sidebar).addClass("is-active");
