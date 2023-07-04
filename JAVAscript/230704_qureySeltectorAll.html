@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>qureySeltorAll</title>
+  <!-- jQurey -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+  </div>
+
+  <script>
+    const hello = document.querySelectorAll(".hello")
+
+    hello.forEach(()=>{
+      hello.innerText = "HELLO"
+      console.log(hello)
+    })
+  </script>
+
+</body>
+</html>
