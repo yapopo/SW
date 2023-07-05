@@ -15,12 +15,34 @@
   </div>
 
   <script>
-    const hello = document.querySelectorAll(".hello")
+    // document.querySelectorAll(".hello")[0].innerHTML="HELLO"
+    // document.querySelectorAll(".hello")[1].innerHTML="HELLO"
+    // document.querySelectorAll(".hello")[2].innerHTML="HELLO"
 
-    hello.forEach(()=>{
-      hello.innerText = "HELLO"
-      console.log(hello)
+    // let hello = document.querySelectorAll(".hello")
+
+    // hello.forEach((changeColor)=>{
+    //   changeColor.style.color = "red"
+    // })
+    // Javascript
+
+    $(".hello").html("hello")
+
+    $(".hello").css("color","blue")
+
+    let names = ["옵티머스 프라임","범블비","미라지","알씨"]
+
+    document.write(names)
+
+    console.log(names)
+
+    names.forEach((name)=>{
+      
+      document.write(`<p>${name}</p>`)
+
+      document.write(`<h1>`+name+`</h1>`)
     })
+
   </script>
 
 </body>
