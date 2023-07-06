@@ -19,21 +19,23 @@ li {
   list-style: none;
 }
 
-header{
-  position: relative;
-  cursor: pointer;
-}
-
-header img {
+.profile-img{
   position: absolute;
   top: 0;
   right: 0;
   width: 60px;
-  border-radius: 50%;
   margin: 2rem 2rem 0 0;
+  border-radius: 50%;
+  border: none;
 }
 
-header img:hover {
+.profile-img img{
+  width: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile-img img:hover {
   opacity: 0.7;
 }
 
@@ -56,8 +58,8 @@ header img:hover {
 
 .profile:before {
     position: absolute;
-    top: -15px;
-    right: 1rem;
+    top: -13px;
+    right: 1.3em;
     content:'';
     width: 16px;
     height: 16px;
@@ -91,7 +93,7 @@ header img:hover {
 }
 
 .profile ul:not(:first-child) li:hover {
-  background-color: darkcyan;
+  background-color: #0366d6;
 }
 
 .profile ul:not(:first-child) li:hover a{
