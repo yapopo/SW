@@ -50,3 +50,7 @@ li {
   border: none;
   cursor: pointer;
 }
+
+.btn-group button.active {
+  background-color: dodgerblue;
+}
