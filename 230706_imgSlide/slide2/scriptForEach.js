@@ -1,29 +1,15 @@
 let buttons = document.querySelectorAll(".btn-group button")
 
-
-
-
-// buttons.forEach(function(btn,index){
-
-//   btn.addEventListener("click",()=>{
-
-//     document.querySelector(".slide-list").style.transform = "translateX(" + index * -100 + "vw)"
-    
-//   })
-
-
-// })
-
-// buttons.forEach((btn,index)=>{
-//   btn.addEventListener("click", ()=>{
-//     let slide = document.querySelector(".slide-list").style.transform = "translateX(" + index * -100 + "vw)"
-//   })
-// })
-
 buttons.forEach((btn,index)=>{
-  btn.addEventListener("click", ()=>{
-    let slide = document.querySelector(".slide-list").style.transform = `translateX(${index * -100 }vw)`
+  btn.addEventListener("click",()=>{
+    document.querySelector(".slide-list").style.transform =
+    `translateX(${index * -100}vw)`
+    
+    if(this){
+      btn.style.opacity = "0.3"
+    }else{
+      btn.style.opacity = "1"
+    }
 
-    console.log(btn,index)
   })
 })

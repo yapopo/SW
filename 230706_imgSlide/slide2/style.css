@@ -38,8 +38,8 @@ li {
 .btn-group {
  position: absolute;
  bottom: 1rem;
- right: 50%;
- transform: translateX(50%);
+ left: 50%;
+ transform: translateX(-50%);
 }
 
 .btn-group button {
