@@ -30,4 +30,29 @@ a {
   display: block;
   background-color: dodgerblue;
   padding: 1rem 2rem;
+  color: #fff;
+  font-weight: 700;
+  transition: background-color 200ms ease-in-out;
 }
+
+.gnb > li > a:hover,
+.gnb > li > a.on  {
+  background-color: royalblue;
+}
+
+.sub {
+  display: none;
+}
+
+.sub li a {
+  display: block;
+  background-color: #ddd;
+  padding: 1rem 2rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.sub li a:hover {
+  background-color: #bbb;
+}
+
+
