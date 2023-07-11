@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.gnb {
+  width: 100%;
+  display: flex;
+}
+
+.gnb > li {
+  width: 25%;
+  text-align: center;
+}
+
+.gnb > li > a {
+  display: block;
+  background-color: dodgerblue;
+  padding: 1rem 2rem;
+}
