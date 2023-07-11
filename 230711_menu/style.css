@@ -44,7 +44,9 @@ a {
 .sub {
   position: absolute;
   width: 100%;
-  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 300ms ease-in-out;
 }
 
 .sub li a {
@@ -56,6 +58,10 @@ a {
 
 .sub li a:hover {
   background-color: #bbb;
+}
+
+.sub.active {
+  max-height: 270px;
 }
 
 
