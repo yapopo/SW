@@ -10,5 +10,55 @@ li {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #333;
 }
+
+header {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+
+.top-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.top-header li {
+  margin: 0 0.5rem;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.gnb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.gnb > li > a{
+  padding: 1rem;
+}
+
+.sub {
+  display: none;
+}
+
+.only-mt {
+  visibility: hidden;
+}
+
+
