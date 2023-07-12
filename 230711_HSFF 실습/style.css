@@ -118,13 +118,13 @@ aside {
 .slide-wrapper {
   width: 100ww;
   overflow: hidden;
-  transition: transform 1s;
 }
 
 .slide-list {
   display: flex;
   width: 400vw;
-  height: 350px;
+  height: 400px;
+  transition: transform 1s;
 }
 
 .slide-list li {
