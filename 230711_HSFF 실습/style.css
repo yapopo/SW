@@ -63,7 +63,7 @@ nav {
 
 .gnb > li > a:hover,
 .gnb > li > a.on {
-  color: darkblue;
+  color: darkcyan;
 }
 
 .sub {
@@ -85,7 +85,7 @@ nav {
   transform: translateX(-50%) ;
   width: 10px;
   height: 10px;
-  background-color: darkblue;
+  background-color: darkcyan;
 }
 
 .sub li {
@@ -94,6 +94,11 @@ nav {
   display: flex;
   justify-content: center;
   background-color: #fff;
+}
+
+.sub li a:hover {
+  background-color: darkcyan;
+  color: #fff;
 }
 
 .sub li a {
