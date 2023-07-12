@@ -62,15 +62,8 @@ nav {
 }
 
 .gnb > li > a:hover,
-.gnb > li > a.on{
+.gnb > li > a.on {
   color: darkblue;
-}
-
-.gnb > li > a:hover .sub::after{
-  content: ".";
-  width: 0.5px;
-  height: 0.5px;
-  background-color: darkblue;
 }
 
 .sub {
@@ -82,6 +75,17 @@ nav {
  display: none;
  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
  z-index: 10;
+}
+
+.sub::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) ;
+  width: 10px;
+  height: 10px;
+  background-color: darkblue;
 }
 
 .sub li {
