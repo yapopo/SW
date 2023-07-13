@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+
+.top-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.top-header li {
+  margin: 0 0.5rem;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.gnb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+}
+
+.gnb > li {
+  position: relative;
+  width: 20%;
+}
+
+.gnb > li > a{
+  display: block;
+  padding: 1rem;
+  width: 100%;
+}
+
+.gnb > li > a:hover,
+.gnb > li > a.on {
+  color: darkcyan;
+}
+
+.sub {
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 200px;
+ height: 100%;
+ display: none;
+ box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+ z-index: 10;
+}
+
+.sub::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) ;
+  width: 10px;
+  height: 10px;
+  background-color: darkcyan;
+}
+
+.sub li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.sub li a:hover {
+  background-color: darkcyan;
+  color: #fff;
+}
+
+.sub li a {
+  display: block;
+  padding: 1rem;
+  width: 100%;
+}
+
+.only-mt {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+aside {
+  height: 100%;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 30px 20px;
+  width: 250px;
+  height: 100vh;
+  z-index: 10;
+  transform:translateX(-400px);
+  transition: transform 300ms ease-in-out;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.side-menu.is-active {
+  transform: translate(0);
+}
+
+.side-menu button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.side-menu-list {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.side-menu-item {
+  border-top: 1px solid #aaa;
+  padding: 1rem 0;
+}
+
+.side-menu-item:last-child {
+
+  border-bottom: 1px solid #aaa;
+}
+
+.slide-wrapper {
+  width: 100ww;
+  overflow: hidden;
+}
+
+.slide-list {
+  display: flex;
+  width: 400vw;
+  height: 400px;
+  transition: transform 1s;
+}
+
+.slide-list li {
+  width: 100vw;
+  height: 100%;
+}
+
+.slide-list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-btn-group {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid #fff;
+}
+
+.slide-btn-group button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.slide-btn-group button:not(:last-child):after {
+  content: "|";
+  padding: 1rem;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+}
+
+.ft1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #414244;
+  padding: 1rem 0;
+}
+
+.info1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  min-width: 850px;
+}
+
+.info-list {
+  display: flex;
+}
+
+.info-list li a {
+  border-left: 1px solid #aaa;
+  padding: 1.2rem;
+  color: #aaa;
+}
+
+.info-list li:last-child a {
+  border-right: 1px solid #aaa;
+}
+
+.info-list li:nth-child(2) a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.info1 p {
+  color: #aaa;
+}
+
+.info1 p span:first-child{
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.info1 p span:last-child {
+  font-size: 0.8rem;
+}
+
+.ft2 {
+  width: 100%;
+  height: 100%;
+  background-color: #2d2d30;
+  padding: 2rem;
+}
+
+.info-list2 {
+  width: 100%;
+  color: #aaa;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+}
+
+.info-list2 li {
+  display: inline-block;
+  padding: 0.2rem 0;
+}
+
+.info-list2 li::after {
+  content: "/";
+  padding: 0.5rem;
+}
+
+@media screen and (max-width:1200px) {
+  
+  .gnb {
+    display: none;
+  }
+
+  .only-mt {
+    visibility:visible 
+  }
+
+}
+
+
+
+
+
+
+
+
