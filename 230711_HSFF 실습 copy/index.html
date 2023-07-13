@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <title>HSPP 건강기능식품미래포럼</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <!-- fontawesome -->
@@ -13,7 +13,136 @@
 <body>
   
 <div class="wrapper">
-  
+
+  <header class="global-header">
+
+    <ul class="gnb-log">
+      <li><a href="">
+        <i class="fa-solid fa-arrow-right-to-bracket"></i>로그인
+      </a></li>
+      <li><a href="">
+        <i class="fa-solid fa-user-group"></i>회원가입
+      </a></li>
+      <li><a href="">
+        <i class="fa-solid fa-key"></i>아이디/비밀번호 찾기
+      </a></li>
+    </ul>
+
+    <div class="gnb-main">
+      <h1 class="logo">
+        <a href=""><img src="./imgs/logo.svg" alt="HSFF로고"></a>
+      </h1>
+
+      <nav>
+
+        <ul class="gnb-main-list lg-only">
+
+          <li class="gnb-main-litem"><a href="">포럼소개
+            <ul class="sub">
+              <li><a href="">취지문</a></li>
+              <li><a href="">주요사업</a></li>
+              <li><a href="">조직위원회</a></li>
+              <li><a href="">정관</a></li>
+              <li><a href="">건강기능식품연구회</a></li>
+            </ul>
+          </a></li>
+
+          <li class="gnb-main-litem"><a href="">포럼신청
+            <ul class="sub">
+              <li><a href="">포럼공지</a></li>
+              <li><a href="">포럼일정 및 참가</a></li>
+            </ul>
+          </a></li>
+
+          <li class="gnb-main-litem"><a href="">포럼활동
+            <ul class="sub">
+              <li><a href="">포럼자료</a></li>
+              <li><a href="">포토갤러리</a></li>
+            </ul>
+          </a></li>
+
+          <li class="gnb-main-litem"><a href="">정보마당
+            <ul class="sub">
+              <li><a href="">e-News</a></li>
+            </ul>
+          </a></li>
+
+          <li class="gnb-main-litem"><a href="">고객센터
+            <ul class="sub">
+              <li><a href="">공지사항</a></li>
+              <li><a href="">자주하는 문의</a></li>
+              <li><a href="">1:1문의</a></li>
+            </ul>
+          </a></li>
+
+        </ul>
+
+      </nav>
+
+      <button type="button" class="gnb-op-btn lg-hidden">
+        <img src="./imgs/btn_nav.svg" alt="사이드바메뉴 펼침버튼">
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="slide-wrapper">
+        <ul class="slide-list">
+          <li><img src="./imgs/img1.jpg" alt="슬라이드이미지1"></li>
+          <li><img src="./imgs/img2.jpg" alt="슬라이드이미지2"></li>
+          <li><img src="./imgs/img3.jpeg" alt="슬라이드이미지3"></li>
+        </ul>
+
+        <ul class="slide-btn">
+          <li class="btn1"><button>첫번쨰</button></li>
+          <li class="btn2"><button>두번쨰</button></li>
+          <li class="btn3"><button>세번쨰</button></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="ft-top">
+      <ul class="ft-left">
+        <li><a href="">이용약관</a></li>
+        <li><a href="">개인정보 처리방침</a></li>
+        <li><a href="">이메일무단수집거부</a></li>
+      </ul>
+
+      <div class="ft-right">
+        <p>대표번호
+          <span class="number">042-1234-5678</span>
+          <span class="time">(평일 09:00 - 18:00)</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+        <img src="./imgs/logo_spot.svg" alt="hspp흑백로고">
+
+        <ul class="ft-info">
+          <li>13488 경기도 성남시 분당구 대왕판교로 700 B동 102호(삼평동, 코리아바이오파크)</li>
+          <li>건강기능식품미래포럼</li>
+          <li>고유번호 : 855-80-01319</li>
+          <li>대표자 : 박영인</li>
+        </ul>
+        <p>Copyright© 2017 Health Supplements Future Forum, All rights reserved.</p>
+    </div>
+  </footer>
+
+  <aside class="side-bar lg-hidden">
+    <button type="button" class="sind-bar-btn">X</button>
+    <ul class="side-bar-list">
+      <li class="side-bar-item"><a href="">포럼소개</a></li>
+      <li class="side-bar-item"><a href="">포럼신청</a></li>
+      <li class="side-bar-item"><a href="">포럼활동</a></li>
+      <li class="side-bar-item"><a href="">정보마당</a></li>
+      <li class="side-bar-item"><a href="">고객센터</a></li>
+    </ul>
+  </aside>
+
 </div>
 
  <script src="./js/jQurey.js"></script>
