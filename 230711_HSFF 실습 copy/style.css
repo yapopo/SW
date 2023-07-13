@@ -63,14 +63,7 @@ a {
   color: darkblue;
 }
 
-.gnb-main-item > a {
-  display: block;
-  text-align: center;
-  padding: 1rem;
-  font-size: 1.1rem;
-}
-
-.gnb-main-item li a {
+.gnb-main-item a {
   display: block;
   text-align: center;
   padding: 1rem;
@@ -83,7 +76,7 @@ a {
   width: 200px;
   background-color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  display: none;
+  /* display: none; */
 }
 
 .sub::before {
