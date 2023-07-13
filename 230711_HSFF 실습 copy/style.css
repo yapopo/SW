@@ -150,6 +150,77 @@ a {
   margin: 0.5rem;
 }
 
+footer {
+  margin-top: 60px;
+  color: #aaa;
+}
+
+.ft-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #414244;
+  padding: 0 1rem;
+}
+
+.ft-top a {
+  color: #aaa;
+}
+
+.ft-left {
+  display: flex;
+}
+
+.ft-left li a {
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  border-left: 1px solid #727272;
+}
+
+.ft-left li:last-child a {
+  border-right: 1px solid #727272;
+}
+
+.ft-left li:nth-child(2) a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.ft-right {
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
+}
+
+.ft-right p span:first-child {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.ft-bottom {
+  background-color: #2d2d30;
+  padding: 50px 40px;
+}
+
+.ft-bottom img {
+  opacity: 0.5;
+}
+
+.ft-info {
+  display: flex;
+  margin-top: 30px;
+}
+
+.ft-info li:not(:first-child):before {
+  content: "/";
+  margin: 0 1rem;
+}
+
+.ft-bottom p {
+  margin-top: 10px;
+}
+
 
 
 
