@@ -222,6 +222,80 @@ footer {
 }
 
 
+@media screen and (max-width:1200px) {
+  .lg-hidden {
+    display: block;
+  }
+
+  .lg-only {
+    display: none;
+  }
+
+  .gnb-log {
+    padding: 20px 30px;
+  }
+  
+  .gnb-log li a {
+    font-size: 1rem;
+  }
+  
+  .gnb-main {
+    padding: 10px 30px
+  }
+
+    
+  .gnb-op-btn {
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+ }
+
+ .side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  transform: translateX(-300px);
+  text-align: center;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 20px 30px;
+  z-index: 15;
+  transition: transform 300ms ease-in-out;
+ }
+
+ .side-bar.active {
+  transform: translateX(0);
+ }
+
+ .side-bar-btn {
+  float: right;
+  border: none;
+  font-size: 1.2rem;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem 0;
+ }
+
+
+ .side-bar-list {
+  clear: both;
+ }
+
+ .side-bar-item a {
+  display: block;
+  padding: 1rem;
+  border-top: 1px solid #aaa;
+ }
+
+ .side-bar-item:last-child a {
+  border-bottom: 1px solid #aaa;
+ }
+
+}
+
 
 
 
