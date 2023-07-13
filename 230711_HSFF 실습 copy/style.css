@@ -76,7 +76,7 @@ a {
   width: 200px;
   background-color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  /* display: none; */
+  display: none;
 }
 
 .sub::before {
