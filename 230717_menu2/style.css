@@ -41,7 +41,7 @@ a{
 
 .submenu-wrapper {
   background-color: darkcyan;
-  /* display: none; */
+  display: none;
 }
 
 .submenu-list {
