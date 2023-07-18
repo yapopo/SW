@@ -2,3 +2,7 @@
   padding: 20px;
   background-color: azure;
 }
+
+.count.is-active{
+  display: none;
+}
