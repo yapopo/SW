@@ -20,19 +20,19 @@ setTimeout(()=>{
 // rgb값으로 랜덤 컬러 변경
 // 최솟값,최댓값을 지정하고 그 사이에서 랜덤한 값을 만드는 함수
 
-let textChange = document.querySelector(".text")
-var arr = ["5","4","3","2","1"]
-var index = 0;
+// let textChange = document.querySelector(".text")
+// var arr = ["5","4","3","2","1"]
+// var index = 0;
 
-function rand (min,max){
-  return Math.round(Math.random() * (max - min + 1)+ min)}
+// function rand (min,max){
+//   return Math.round(Math.random() * (max - min + 1)+ min)}
 
-  setInterval(()=>{
-    let r = rand(0,255)
-    let g = rand(0,255)
-    let b = rand(0,255)
+//   setInterval(()=>{
+//     let r = rand(0,255)
+//     let g = rand(0,255)
+//     let b = rand(0,255)
 
-    document.querySelector(".count").style.backgroundColor = `rgb(${r},${g},${b})`
+//     document.querySelector(".count").style.backgroundColor = `rgb(${r},${g},${b})`
      
-  } ,1000)
+//   } ,1000)
 
