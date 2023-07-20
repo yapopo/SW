@@ -79,10 +79,6 @@ button {
   display: none;
 }
 
-.modal.active {
-  display: block;
-}
-
 .modal-top {
   display: flex;
   justify-content: space-between;
@@ -130,8 +126,4 @@ button {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
-}
-
-.overlay.active {
-  display: block;
 }
