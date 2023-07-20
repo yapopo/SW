@@ -1,12 +1,23 @@
 
-$(".modal-item").click(function(){
-  let i =$(this).index();
-  $(".modal").eq(i).addClass("active")
-  $(".opacity").addClass("active")
-  console.log(i)
+$(".open-btn").click(function(){
+  $(".modal-box").fadeIn()
+  $(".overlay").fadeIn()
 })
 
-$(".modal-btn button").click(function(){
-  $(".modal").removeClass("active")
-  $(".opacity").removeClass("active")
+$(".close-btn").click(function(){
+  $(".modal").fadeOut()
+  $(".overlay").fadeOut()
+})
+
+$('.modal-list img').click(function(){
+  let 이미지경로 = $(this).attr('src');
+  let 대체텍스트 = $(this).attr('alt');
+
+  $('.img-modal-wrapper img').attr({
+    src : 이미지경로,
+    alt : 대체텍스트
+  })
+
+  $(".img-modal-box").fadeIn();
+  $(".overlay").fadeIn();
 })
