@@ -68,11 +68,6 @@ a {
   color: #fff;
 }
 
-.modal-page {
-  width: 100%;
-  height: 100%;
-}
-
 .modal {
   position: absolute;
   top: 50%;
