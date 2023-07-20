@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f918508 (⚡️ laptop update)
 $(".modal-item").click(function(){
   let i =$(this).index();
   $(".modal").eq(i).addClass("active")
