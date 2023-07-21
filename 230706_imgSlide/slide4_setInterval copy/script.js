@@ -1,12 +1,44 @@
-let buttons = document.querySelectorAll(".slide-item-btn")
+let cur = 0
+let len = $(".slide-item").length;
 
-buttons.forEach((btn,index)=>{
-  btn.addEventListener("click", (e)=>{
-    let slide = document.querySelector(".slide-list").style.transform = `translateX(${index * -100 }vw)`
+console.log(len)
 
-    buttons.forEach(btn => btn.classList.remove('active'));
-    e.target.classList.add('active');
+for(i = 0; i < len; i++){
+  $("#dots").append("<div></div>");
+}
 
-    console.log(btn,index)
+function sliding(dir){
+  cur = cur + dir;
+
+  if( cur >= len ){
+    cur = 0
+  }else if(cur < 0){
+    
+    cur = len - 1;
+  }
+
+  $(".slide-item").eq(cur).siblings(".slide-item").stop().fadeOut();
+
+  $(".slide-item").eq(cur).stop().fadeIn(function(){
+    $(this).siblings(".slide-item").children("p").css
+    ({marginTop : "20px" , opacity : 0});
+    $(this).children("p").stop().animate({
+      marginTop : 0 , opacity : 1
+    },500);
   })
+
+  $("#dots div").removeClass("is-active");
+  $("#dots div").eq(cur).addClass("is-active");
+
+}
+
+$("#prev").click(function(){sliding(-1)})
+$("#next").click(function(){sliding(+1)})
+
+let auto = setInterval(sliding , 4000 , 1);
+
+$("#dots div").click(function(){
+  cur = 0;
+  let num = $(this).index()
+  sliding(num)
 })
