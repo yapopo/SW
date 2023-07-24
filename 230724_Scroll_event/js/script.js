@@ -14,11 +14,9 @@ window.addEventListener("scroll",()=>{
   document.querySelector("nav").style.backgroundColor = "#ccc"
  }
 
- if(스크롤양+높이 == 스크롤높이){
-  alert("전체 스크롤 끝!")
- }
-
- console.log(window.scrollY)
+//  if(스크롤양+높이 == 스크롤높이){
+//   alert("전체 스크롤 끝!")
+//  }
 
 })
 

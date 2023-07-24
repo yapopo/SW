@@ -29,6 +29,15 @@ button i {
   font-size: 2rem;
 }
 
+.bar {
+  position: fixed;
+  top : 118px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: darkblue;
+}
+
 .box {
   height: 3000px;
   background-color: cadetblue;
@@ -40,3 +49,4 @@ button i {
   height: 300px;
   overflow-y: scroll;
 }
+
