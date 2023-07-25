@@ -30,12 +30,13 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
   display: none;
+  z-index: 15;
 }
 
-.overlay.show{
+/* .overlay.show{
   display: block;
 }
 
 .bg-overlay.show{
   display: block;
-}
+} */
