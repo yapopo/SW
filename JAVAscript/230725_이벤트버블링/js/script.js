@@ -1,16 +1,30 @@
 
 
-$(".open").click(function(){
-  $(".overlay").stop().fadeIn()
-  $(".bg-overlay").stop().fadeIn()
+// $(".open").click(function(){
+//   $(".overlay").stop().fadeIn()
+// })
+
+// $(".close").click(function(){
+//   $(".overlay").stop().fadeOut()
+// })
+
+// $(".overlay").on("click",function(e){
+//   if($(e.target) == $(".overlay")){
+//     $(".overlay").fadeOut()}
+
+//     console.log($(e.target))
+// })
+
+$(".open").on("click", function(){
+  $(".overlay").addClass("show");
 })
 
-$(".close").click(function(){
-  $(".overlay").stop().fadeOut()
-  $(".bg-overlay").stop().fadeOut()
+$(".close").on("click", function(){
+  $(".overlay").removeClass("show");
 })
 
-$(".bg-overlay").click(function(){
-  $(".overlay").stop().fadeOut()
-  $(".bg-overlay").stop().fadeOut()
+$(".overlay").on("click",function(e){
+  if($(e.target).is(".overlay")){
+    $(".overlay").removeClass("show");
+  }
 })
