@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
 
 button {
   border: none;
@@ -16,3 +24,130 @@ button {
   padding: 3rem 0;
 }
 
+.global-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 768px;
+}
+
+.logo img {
+  width: 240px;
+}
+
+.lang {
+  position: absolute;
+  right: 10px;
+}
+
+.join-form {
+  max-width: 460px;
+  margin: 2rem auto;
+}
+
+section label {
+  display: flex;
+  align-items: center;
+}
+
+label input[type = "checkbox"] {
+  display: none;
+}
+
+.checkbox-img {
+  margin-right: 8px;
+}
+
+label p {
+  width: calc(100% - 32px);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.total .checkbox-img {
+  width: 24px;
+  height: 24px;
+  background-image: url(./imgs/pc_chcek_off_s_20.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.total .checkbox-img.checked {
+  background-image: url(./imgs/pc_chcek_on_s_20.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.agree {
+  margin: 40px 0;
+}
+
+.agree .checkbox-img {
+  width: 20px;
+  height: 20px;
+  background-image: url(./imgs/pc_chcek_off_s_20.png);
+}
+
+.agree .checkbox-img.checked {
+  background-image: url(./imgs/pc_chcek_on_s_20.png);
+}
+
+.agree label p {
+  display: flex;
+  align-items: center;
+}
+
+.agree label span {
+  font-weight: normal;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.txt-primary {
+  color: #08A600;
+}
+
+.txt-secondary {
+  color: #8e8e8e;
+}
+
+.terms {
+  height: 130px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.terms p:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.req-alert {
+  font-size: 14px;
+  color: red;
+  padding: 1rem;
+  visibility: hidden;
+}
+
+.btn {
+  width: calc((100% - 8px) /2);
+  height: 55px;
+  background-color: #08A600;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.group-join {
+  margin-top: 12px;
+  transition: color 300ms ease-in-out;
+}
+
+.group-join a:hover {
+  color: #08A600;
+}
