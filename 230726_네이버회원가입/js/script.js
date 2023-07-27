@@ -29,3 +29,14 @@ $(".ok").click(function(){
   }
 
 })
+
+
+// $(function(){
+//   if($(".check:checked").length == 4){
+//     $("#mainCheck").prop("checked",false);
+//   }else{
+//     $("mainCheck").prop("checked",true)
+//   }
+
+//   console.log($(".check:checked"))
+// })
