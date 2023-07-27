@@ -8,11 +8,20 @@ $("#mainCheck").click(function(){
 })
 
 
+// $(".ok").click(function(){
+ 
+//   if($("#mustCheck1").is(":checked") == false){
+//     $(".alart").addClass("active")
+//   }else if($("#mustCheck2").is(":checked") == false){
+//     $(".alart").addClass("active")
+//   }
+
+// })
+
 $(".ok").click(function(){
  
-  if($("#mustCheck1").is(":checked") == false){
-    $(".alart").addClass("active")
-  }else if($("#mustCheck2").is(":checked") == false){
+  if($("#mustCheck1").is(":checked") == false ||
+  $("#mustCheck2").is(":checked") == false){
     $(".alart").addClass("active")
   }
 
