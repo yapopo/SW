@@ -23,6 +23,9 @@ $(".ok").click(function(){
   if($("#mustCheck1").is(":checked") == false ||
   $("#mustCheck2").is(":checked") == false){
     $(".alart").addClass("active")
+  }else if($("#mustCheck1").is(":checked") == true &&
+  $("#mustCheck2").is(":checked") == true){
+    $(".alart").removeClass("active")
   }
 
 })
