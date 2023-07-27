@@ -9,25 +9,28 @@ input[type=checkbox] {
 }
 
 input[type=checkbox] + label{
-  padding-left: 1.5rem;
+  padding-left: 1.8rem;
   width: 30px;
   height: 30px;
   background-image: url(./imgs/pc_chcek_off_s_20.png);
   background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
 input[type=checkbox]:checked + label{
-  padding-left: 1.5rem;
+  padding-left: 1.8rem;
   width: 30px;
   height: 30px;
   background-image: url(./imgs/pc_chcek_on_s_20.png);
   background-repeat: no-repeat;
+  background-position: center;
 
 }
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -65,6 +68,9 @@ header {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+
 }
 
 .text {
@@ -77,13 +83,40 @@ header {
   margin-bottom: 2rem;
 }
 
-.check-txt {
+.text p:first-child {
   margin-bottom: 1rem;
 }
+
+.check-txt {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+span {
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.green {
+  color: #08A600;
+}
+
 
 .bottom {
   width: 500px;
   margin: 0 auto;
+}
+
+.alart {
+  margin-bottom: 2rem;
+  color: red;
+visibility: hidden;}
+
+.alart.active {
+  visibility: visible;
 }
 
 .button {

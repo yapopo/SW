@@ -29,8 +29,8 @@
     <div class="form">
       <form action="">
         <div class="agreetxt">
-          <input type="checkbox" class="maincheck">
-          <label for="check"></label>
+          <input type="checkbox" id="mainCheck">
+          <label for="mainCheck"></label>
           <p><u>
             네이버 이용약관, 개인정보 수집 및 이용,
                위치정보 이용약관(선택), 프로모션 정보 수신(선택)에
@@ -41,9 +41,9 @@
 
         <section>
           <div class="check-txt">
-            <input type="checkbox" class="check">
-            <label for="check"></label>
-             네이버 이용약관 동의 <span>(필수)</span>
+            <input type="checkbox" id="mustCheck1">
+            <label for="mustCheck1"></label>
+             네이버 이용약관 동의 <span class="green">(필수)</span>
           </div>
           <div class="text">
             <p><b>여러분을 환영합니다.</b></p>
@@ -324,9 +324,9 @@
         </section>
         <section>
           <div class="check-txt">
-            <input type="checkbox" class="check">
-            <label for="check"></label>
-            개인정보 수집 및 동의 <span>(필수)</span>
+            <input type="checkbox" id="mustCheck2">
+            <label for="mustCheck2"></label>
+            개인정보 수집 및 동의 <span class="green">(필수)</span>
           </div>
           <div class="text">
             <p><b>여러분을 환영합니다.</b></p>
@@ -606,8 +606,8 @@
         </section>
         <section>
           <div class="check-txt">
-            <input type="checkbox" class="check">
-            <label for="check"></label>
+            <input type="checkbox" id="optionCheck1">
+            <label for="optionCheck1"></label>
             위치정보 이용약관 동의 <span>(선택)</span>
           </div>
           <div class="text">
@@ -888,8 +888,8 @@
         </section>
         <section>
           <div class="check-txt">
-            <input type="checkbox" class="check">
-            <label for="check"></label>
+            <input type="checkbox" id="optionCheck2">
+            <label for="optionCheck2"></label>
             프로모션 정보수신 동의 <span>(선택)</span>
           </div>
           <div class="text">
@@ -1172,8 +1172,13 @@
     </div>
 
     <div class="bottom">
+
+      <div class="alart">
+        <p>네이버 이용약관과 개인정보 수집 및 이용에 대한 안내에 모두 동의해주세요.</p>
+      </div>
+
       <div class="button">
-        <button type="button" class="cancle">취소</button>
+        <a href="https://www.naver.com/"><button type="button" class="cancle">취소</button></a>
         <button type="button" class="ok">확인</button>
       </div>
       <p>회사,동아리 등 단체에서 사용할 ID가 필요하세요?
