@@ -36,10 +36,12 @@ $(".agree label").on("click",function(){
 
 })
 
-$("#submit").on("click",function(){
+$("#submit").on("click",function(e){
 
   let len = $(".req .checkbox-img").length;
   let checkLen = $(".req .checked").length;
+
+  e.preventDefault();
 
   if(len !== checkLen){
     $(".req-alert").css("visibility","visible")
@@ -48,8 +50,11 @@ $("#submit").on("click",function(){
     $(".join-form form").submit()
   }
 
-  
 
+})
+
+$("#cancle").on("click",function(){
+  location.href = "http://www.naver.com"
 })
 
 
