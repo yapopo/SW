@@ -52,7 +52,7 @@ section label {
 }
 
 label input[type = "checkbox"] {
-  /* display: none; */
+  display: none;
 }
 
 .checkbox-img {
@@ -130,8 +130,8 @@ label p {
 .req-alert {
   font-size: 14px;
   color: red;
-  padding: 1rem;
   visibility: hidden;
+  margin-bottom: 2rem;
 }
 
 .btn {

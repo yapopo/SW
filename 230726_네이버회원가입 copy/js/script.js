@@ -22,4 +22,34 @@ $('.total label').on('click', function(){
 })
 
 
+$(".agree label").on("click",function(){
+  let len = $(".agree .checkbox-img").length;
+  let checkLen = $(".agree .checked").length;
+
+  if(len == checkLen){
+    $(".total label").children(".checkbox-img").addClass("checked");
+    $(".total label").children("input[type = 'checkbox']").attr("checked",true);
+  }else{
+    $(".total label").children(".checkbox-img").removeClass("checked");
+    $(".total label").children("input[type = 'checkbox']").removeAttr("checked");
+  }
+
+})
+
+$("#submit").on("click",function(){
+
+  let len = $(".req .checkbox-img").length;
+  let checkLen = $(".req .checked").length;
+
+  if(len !== checkLen){
+    $(".req-alert").css("visibility","visible")
+  }else{
+    $(".req-alert").css("visibility","hidden")
+    $(".join-form form").submit()
+  }
+
+  
+
+})
+
 
