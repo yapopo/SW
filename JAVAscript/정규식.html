@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규식</title>
+</head>
+<body>
+
+  <script>
+    let para = "안녕하세요";
+
+    // console.log(para.includes("미안"))
+
+    let a = /[a-z]/;
+    console.log(a.test("Q"))
+
+    let b = /[A-Z]/;
+    console.log(b.test("aBcc"))
+
+    let c = /[a-zA-Z]/;
+    console.log(c.test("abc"))
+
+    let d = /[ㄱ-ㅎㅏ-ㅣ가-히]/;
+    console.log(d.test("aBcㅠc"))
+
+    //a-z로 시작하는가 
+    let e = /^a-z/;
+    console.log(e.test("0Bcㅠc"))
+    // a로 끝나는가
+    let f = /a$/;
+    console.log(f.test("0Bcㅠca"))
+    // a나 b가 들어가는가
+    let g = /a|b/;
+    console.log(g.test("0Bcㅠca"))
+
+
+  </script>
+
+</body>
+</html>
