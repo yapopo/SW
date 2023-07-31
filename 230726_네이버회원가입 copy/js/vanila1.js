@@ -82,7 +82,12 @@ submitBtn.addEventListener("click",(e)=>{
 })
 
 cancleBtn.addEventListener("click",()=>{
-  location.href = "http://www.naver.com"
+  // 기본창에서이동
+  // location.href = "http://www.naver.com"
+  // 주소이동후 뒤로가기 없음
+  // location.replace("http://www.naver.com")
+  // 새창에 주소
+  window.open("http://www.naver.com")
 })
 
 
