@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="joinstyle.css">
+   <!-- jQurey -->
+   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <title>네이버 회원가입 join</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <h1 class="logo"><a href="http://www.naver.com">
+        <img src="./imgs/logo.png" alt="네이버로고">
+      </a></h1>
+    </header>
+
+    <section class="join-form">
+
+      <form action="">
+<!-- 아이디 -->
+        <label class="id">
+          <p>아이디</p>
+
+            <input required id ="id" type="text" name="userID" placeholder="naver.com">
+          
+        </label>
+        <div class="id-txt">
+          <p class="req-alert">필수 정보입니다</p>
+          <p class="confirm-alert">멋진 아이디네요!</p>
+        </div>
+<!-- 비밀번호 -->
+        <label class="pw">
+          <p>비밀번호</p>
+
+            <input required id="pw" type="password" name="userPW" value="userPW">
+            
+        </label>
+        <div class="pw-txt">
+          <p class="req-alert">필수 정보입니다</p>
+          <p class="notconfirm-alert">8~16자 영문 대 소문자,숫자,특수문자를 사용하세요.</p>
+        </div>
+<!-- 비밀번호 재확인  -->
+
+        <label class="pw-check">
+          <p>비밀번호 재확인</p>
+
+            <input required id="pwchk" type="password" name="userPWchk" value="userPW">
+          
+
+        </label>
+        <div class="pwchk-txt">
+          <p class="req-alert">필수 정보입니다</p>
+          <p class="notcorret-alert">비밀번호가 일치하지 않습니다</p>
+        </div>
+<!-- 이름 -->
+        <label class="name">
+          <p>이름</p>
+
+            <input required id = "name" type="text" name="userNAME">
+
+        </label>
+        <p class="req-alert">필수 정보입니다</p>
+<!-- 생년월일 -->
+        <label class="birth">
+          <p>생년월일</p>
+          <div class="year">
+            <input type="text" name="year" placeholder="년(4자)">
+          </div>
+          <div class="month">
+            
+            <select name="month" id="month">
+              <option value="month" selected disabled>월</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+
+            </select>
+          </div>
+          <div class="date">
+            <input type="text" name="date" placeholder="일">
+          </div>
+        </label>
+        <div class="birth-txt">
+          <p class="alert-year">태어난 년도 4자리를 정확하게 입력하세요.</p>
+          <p class="alert-month">태어난 월을 선택하세요.</p>
+          <p class="alert-date">태어난 일(날짜)을 정확하게 입력하세요.</p>
+        </div>
+<!-- 성별 -->
+        <label class="gender">
+          <p>성별</p>
+          <span><input id="gender" type="radio" name="gender" value="0">남자</span>
+          <span><input id="gender" type="radio" name="gender" value="1">여자</span>
+          <span><input id="gender" type="radio" name="gender" value="2">선택안함</span>
+        </label>
+<!-- 본인확인이메일 -->
+        <label class="mail">
+          <p>본인확인 이메일 <span>(선택)</span></p>
+          <input type="text" placeholder="선택입력">
+        </label>
+         <p class="alert-check">이메일 주소를 다시 확인해주세요</p>
+<!-- 전화번호 -->
+        <label class="number">
+          <p>휴대전화</p>
+          <select name="number" id="number">
+            <option value="233">가나 +233</option>
+            <option value="30">그리스 +30</option>
+            <option value="82" selected>대한민국 +82</option>
+            <option value="49">독일 +49</option>
+            <option value="960">몰디브 +960</option>
+            <option value="1">미국/캐나다 +1</option>
+            <option value="254">케나 +254</option>
+          </select>
+          <div class="getnum">
+            <input type="text" placeholder="전화번호 입력">
+            <button type="button">인증번호 받기</button>
+          </div>
+          <input type="text" placeholder="인증번호 입력하세요" disabled>
+          <div class="notconfirm">불일치</div>
+        </label>
+        <div class="numtxt">
+          <p class="req-alert">필수 정보입니다.</p>
+          <p class="num-ok">"인증번호를 발송했습니다.(유효시간 30분) 
+            인증번호가 오지 않으면 입력하신 정보가 정확한지 확인하여 주세요. 
+            이미 가입된 번호이거나, 가상전화번호는 인증번호를 받을 수 없습니다.”</p>
+        </div>
+        <p class="notcorret-alert">형식에 맞지 않는 번호입니다.</p>
+        <p class="confirm-alert">인증되었습니다.</p>
+        <p class="notconfirm-alert">인증번호를 다시 확인해주세요.</p>
+<!-- 주소 -->
+        <label class="adress">
+          <p>주소</p>
+          <div class="find">
+            <input type="text" placeholder="우편주소">
+            <button type="button">우편번호 찾기</button>
+          </div>
+          <input type="text" placeholder="도로명주소"><br>
+          <input type="text" placeholder="지번주소"><br>
+          <input type="text" placeholder="상세주소"><br>
+          <input type="text" placeholder="참고항목">
+        </label>
+<!-- 가입버튼 -->
+
+        <div class="button">
+          <button type="button">가입하기</button>
+        </div>
+      </form>
+
+    </section>
+  </div>
+</body>
+</html>
