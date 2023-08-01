@@ -8,10 +8,201 @@ button {
   border: none;
   background-color:#03c75a;
   color: #fff;
+  cursor: pointer;
 }
 
 .wrapper {
   width: 468px;
   max-width: 468px;
   margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+header img {
+  width: 200px;
+}
+
+.join-form form > div {
+  margin-bottom: 1rem;
+}
+
+label > p {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #aaa;
+  padding: 0.7rem 1rem;
+}
+
+.alert {
+  visibility: hidden;
+}
+
+.id-txt {
+  position: relative;
+}
+
+.txt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  right: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.pw-input {
+  position: relative;
+}
+
+.pw-img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20%;
+  right: 1rem;
+  background-image: url(./imgs/m_icon_pw_step_01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .pw-img.not-ok {
+  background-image: url(./imgs/m_icon_pw_step_010.png);
+}
+
+.pw-img.ok {
+  background-image: url(./imgs/m_icon_pw_step_04.png);
+} */
+
+.pwchk-input {
+  position: relative;
+}
+
+.pwchk-img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20%;
+  right: 1rem;
+  background-image: url(./imgs/m_icon_pw_step_02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.birth-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.birth-input > div {
+  width: 33%;
+  margin-right: 0.5rem;
+}
+
+.birth-input > div:last-child{
+  margin: 0;
+}
+
+.month select {
+  width: 100%;
+  padding: 10.5px 1rem;
+  border: 1px solid #aaa;
+}
+
+.month select option:first-child{
+  padding: 0.7rem 1rem;
+}
+
+.gender-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type = radio] {
+  display: none;
+}
+
+input[type = radio] + label {
+  width: 33%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #aaa;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+input[type = radio] + label:last-child{
+  margin: 0;
+}
+
+input[type = radio]:checked + label {
+  background-color: #03c75a;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.number select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.getnum {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.getnum button {
+  width: 30%;
+  padding: 0 0.3rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.numtxt {
+  position: relative;
+}
+
+.alert-txt {
+  position: absolute;
+  top: 10.5px;
+  right: 1rem;
+  font-size: 0.8rem;
+  color: red;
+  display: none;
+}
+
+.adress label > input {
+  margin-top: 0.5rem;
+}
+
+.find {
+  display: flex;
+  justify-content: space-between;
+}
+
+.find button {
+  width: 30%;
+  padding: 0 0.3rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.button button {
+  width: 100%;
+  padding: 0.7rem 1rem;
 }
