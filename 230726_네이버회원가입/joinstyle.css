@@ -44,8 +44,15 @@ input {
   padding: 0.7rem 1rem;
 }
 
+input:focus {
+  outline: 1px solid #03c75a;
+}
+
 .alert {
-  visibility: hidden;
+  display: none;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  margin-left: 5px;
 }
 
 .id-txt {
