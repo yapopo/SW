@@ -36,7 +36,7 @@
           <label>
             <p>비밀번호</p>
               <div class="pw-input">
-                <input required id="pw" type="password" name="userPW" value="">
+                <input required id="pw" type="password" name="userPW">
                 <div class="pw-img"></div>
               </div>
           </label>
@@ -47,7 +47,7 @@
           <label>
             <p>비밀번호 재확인</p>
               <div class="pwchk-input">
-                <input required id="pwchk" type="password" name="userPWchk" value="">
+                <input required id="pwchk" type="password" name="userPWchk">
                 <div class="pwchk-img"></div>
               </div>
           </label>
@@ -71,7 +71,7 @@
               </div>
               <div class="month">
                 <select name="month" id="month">
-                  <option value="" selected disabled>월</option>
+                  <option value="" selected disabled hidden>월</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -111,7 +111,7 @@
         <div class="mail">
           <label>
             <p>본인확인 이메일 <span>(선택)</span></p>
-            <input type="text" placeholder="선택입력">
+            <input id="mail" type="text" placeholder="선택입력">
           </label>
            <p class="alert"></p>
         </div>

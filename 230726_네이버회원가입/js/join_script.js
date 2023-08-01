@@ -1,4 +1,4 @@
-$(".id-txt input").focusout(function(){
+$("#id").focusout(function(){
   let content = $(this).val().length;
 
   if(content == 0){
@@ -19,7 +19,7 @@ $(".id-txt input").focusout(function(){
 
 // id부분 script 끝
 
-$(".pw-input input").focusout(function(){
+$("#pw").focusout(function(){
   let content = $(this).val().length;
 
   if(content == 0){
@@ -41,16 +41,109 @@ $(".pw-input input").focusout(function(){
 
 })
 
-$(".pw-check input").focusout(function(){
+// pw script 끝
+
+$("#pwchk").focusout(function(){
   let content = $(this).val().length;
 
   if(content == 0){
     $(".pw-check .alert").css("display","block")
     $(".pw-check p.alert").text("필수 정보입니다.")
     $(".pw-check p.alert").css("color","red")
-    $(".pw-check-img").removeClass("not-ok")
-    $(".pw-check-img").removeClass("ok")
-  }else if()
+    $(".pwchk-img").removeClass("ok")
+  }else if($(".pw input").val() != $(".pw-check input").val()){
+    $(".pw-check .alert").css("display","block")
+    $(".pw-check p.alert").text("비밀번호가 일치하지 않습니다..")
+    $(".pw-check p.alert").css("color","red")
+  }else{
+    $(".pw-check .alert").css("display","none")
+    $(".pwchk-img").addClass("ok")
+  }
 
+})
+
+// pw-check script 끝
+
+$("#name").focusout(function(){
+  let content = $(this).val().length;
+
+  if(content == 0){
+    $(".name .alert").css("display","block")
+    $(".name p.alert").text("필수 정보입니다.")
+    $(".name p.alert").css("color","red")
+  }
+
+})
+
+// name script 끝
+
+$(".year input").focusout(function(){
+  let content = $(this).val().length;
+
+  if(content == 0){
+    $(".birth .alert").css("display","block")
+    $(".birth p.alert").text("태어난 년도 4자리를 정확하게 입력하세요.")
+    $(".birth p.alert").css("color","red")
+  }else{
+    $(".birth .alert").css("display","none")
+  }
+})
+
+// year script 끝
+
+$("#month").focusout(function(){
+  let content = $(this).val()
+
+  if(content == null){
+    $(".birth .alert").css("display","block")
+    $(".birth p.alert").text("태어난 월을 선택하세요.")
+    $(".birth p.alert").css("color","red")
+  }else{
+    $(".birth .alert").css("display","none")
+  }
+
+})
+
+// month script 끝
+
+$(".date input").focusout(function(){
+  let content = $(this).val().length;
+
+  if(content == 0){
+    $(".birth .alert").css("display","block")
+    $(".birth p.alert").text("태어난 일(날짜) 2자리를 정확하게 입력하세요.")
+    $(".birth p.alert").css("color","red")
+  }else{
+    $(".birth .alert").css("display","none")
+  }
+})
+
+// date script 끝
+
+$("#mail").focusout(function(){
+
+let regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+let content = $("#mail").val()
+
+ if(regExp.test(content) == false){
+  $(".mail .alert").css("display","block")
+  $(".mail p.alert").text("이메일 주소를 다시 확인해주세요.")
+  $(".mail p.alert").css("color","red")
+ }else{
+  $(".mail .alert").css("display","none")
+ }
+
+})
+
+// mail script 끝
+
+$(".number input").focusout(function(){
+  let content = $(this).val().length;
+
+  if(content == 0){
+    $(".number .alert").css("display","block")
+    $(".number p.alert").text("필수 정보입니다.")
+    $(".number p.alert").css("color","red")
+  }
 
 })
