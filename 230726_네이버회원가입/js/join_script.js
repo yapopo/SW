@@ -5,7 +5,7 @@ $(".id-txt input").focusout(function(){
     $(".id .alert").css("display","block")
     $(".id p.alert").text("필수 정보입니다.")
     $(".id p.alert").css("color","red")
-  }else if(1 < content < 5 || content > 20){
+  }else if(content < 5 ||  20 < content){
     $(".id .alert").css("display","block")
     $(".id p.alert").text("5 ~ 20자의 영문소문자만 가능합니다.")
     $(".id p.alert").css("color","red")
@@ -15,5 +15,10 @@ $(".id-txt input").focusout(function(){
     $(".id p.alert").css("color","#03c75a")
   }
 
-  console.log(content)
+})
+
+// id부분 script 끝
+
+$(".pw-input input").focusout(function(){
+  let content = $(this).val().length;
 })
