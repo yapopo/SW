@@ -129,5 +129,14 @@ $('#year, #month, #date').focusout(function(){
     $('.birth .warn').empty();
   }
   
+})
 
+$(".gender .inputbox").on("click",function(){
+  $(".gender .inputbox").removeClass("btn-primary")
+  $(".gender .inputbox input[type = 'radio']").prop("checked", false)
+  
+  $(this).addClass("btn-primary")
+  $(this).children("input[type = 'radio']").prop("checked", true)
+
+  genderveri = true;
 })
