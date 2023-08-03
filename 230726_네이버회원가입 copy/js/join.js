@@ -140,3 +140,20 @@ $(".gender .inputbox").on("click",function(){
 
   genderveri = true;
 })
+
+
+$("#email").focusout(function(){
+  let mail = $(this).val();
+  let mailExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
+  if(mail.length == 0){
+    $(".usermail .warn").empty();
+  }
+  else if(!mailExp.test(mail)){
+    mailveri = false;
+    $(".usermail .warn").html('<span class="text-red">이메일 주소를 다시 확인해주세요.</span>')
+  }else {
+    $(".usermail .warn").empty();
+  }
+
+})
