@@ -60,8 +60,12 @@ $('.userpw-chk input').focusout(function(){
   let nameExp = /[ㄱ-ㅎ]/
 
 
+
+
   if(userPwChk.length == 0) {
     $('.userpw-chk .warn').html('<span class="text-red">필수정보 입니다.</span>')
+
+    $(".userpw-chk .inputbox span").empty();
     $('.userpw-chk .inputbox img').attr('src', './imgs/m_icon_pw_step_02.png')
   } else if($(".userpw input").val() != userPwChk)  {
     pwchkveri = true;
@@ -72,6 +76,7 @@ $('.userpw-chk input').focusout(function(){
     $('.userpw-chk .warn').empty();
     $('.userpw-chk .inputbox img').attr('src', './imgs/m_icon_pw_step_04.png')
   }
+
 })
 
 $('.username input').focusout(function(){
@@ -121,5 +126,6 @@ $('#year, #month, #date').focusout(function(){
     bitrhveri = true;
     $('.birth .warn').empty();
   }
+
 
 })
