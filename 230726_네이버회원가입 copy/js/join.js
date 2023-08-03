@@ -157,3 +157,39 @@ $("#email").focusout(function(){
   }
 
 })
+
+$(".phonenum input").focusout(function(){
+  let num = $(this).val();
+  let number = num.replace(/[^0-9.]/g, '');
+
+  let veri1;
+  if (num.length < 10 || num.length > 11) {
+    veri1 = false;
+  } else {
+    veri1 = true;
+  }
+
+  var veri2;
+  if (!isNaN(num)) {
+    veri2 = true;
+  } else {
+    veri2 = false;
+  }
+
+  console.log(veri1,veri2)
+
+  if(num.length == 0){
+    $(".phone .warn").html('<span class="text-red">필수 정보입니다.</span>')
+  }else if(veri1 == true && veri2 == true){
+    phoneveri = true;
+    $(".phone .warn").html('<span class="text"">인증번호를 발송했습니다.(유효시간 30분) 인증번호가 오지 않으면 입력하신 정보가 정확한지 확인하여 주세요. 이미 가입된 번호이거나, 가상전화번호는 인증번호를 받을 수 없습니다.</span>')
+    $(".phone .warn span").css("color","#03c75a")
+    $(".disinput").removeClass("disinput")
+    $("#veritext").prop("disabled",true)
+  }else{
+    $(".phone .warn").html('<span class="text-red">형식에 맞지 않는 번호입니다.</span>')
+  }
+
+
+
+})
