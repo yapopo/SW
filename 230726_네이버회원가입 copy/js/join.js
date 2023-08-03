@@ -102,6 +102,7 @@ $('#year, #month, #date').focusout(function(){
   let date = $("#date").val();
   let now = new Date();
   let birth = new Date(year,month,date);
+  let nowStamp = now.getTime();
 
   now = now.getFullYear();
   birth = birth.getTime();
@@ -112,7 +113,7 @@ $('#year, #month, #date').focusout(function(){
   } else if(month.length == 0)  {
     bitrhveri = true;
     $('.birth .warn').html('<span class="text-red">태어난 월을 선택하세요.</span>')
-  }else if(date.length == 0 || date > 31)  {
+  }else if(date.length == 0 || date > 31 || date <=0)  {
     bitrhveri = true;
     $('.birth .warn').html('<span class="text-red">태어난 일(날짜)2자리를 정확하게 입력하세요.</span>')
   }
@@ -120,12 +121,13 @@ $('#year, #month, #date').focusout(function(){
   else if(isNaN(year*month*date)){
     $('.birth .warn').html('<span class="text-red">생년월일을 확인해주세요.</span>')
   } else if(now - year > 100){
-    bitrhveri = true;
     $('.birth .warn').html('<span class="text-red">정말이세요?</span>')
+  } else if(nowStamp < birth){
+    $('.birth .warn').html('<span class="text-red">미래에서 오셨군요.^^</span>')
   } else {
     bitrhveri = true;
     $('.birth .warn').empty();
   }
-
+  
 
 })
