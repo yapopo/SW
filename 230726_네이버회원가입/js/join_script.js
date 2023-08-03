@@ -45,11 +45,13 @@ $("#pw").focusout(function(){
 
 $("#pwchk").focusout(function(){
   let content = $(this).val().length;
+  let value = $(this)
 
   if(content == 0){
     $(".pw-check .alert").css("display","block")
     $(".pw-check p.alert").text("필수 정보입니다.")
     $(".pw-check p.alert").css("color","red")
+<<<<<<< HEAD
     $(".pwchk-img").removeClass("ok")
   }else if($(".pw input").val() != $(".pw-check input").val()){
     $(".pw-check .alert").css("display","block")
@@ -59,6 +61,11 @@ $("#pwchk").focusout(function(){
     $(".pw-check .alert").css("display","none")
     $(".pwchk-img").addClass("ok")
   }
+=======
+    $(".pw-check-img").removeClass("not-ok")
+    $(".pw-check-img").removeClass("ok")
+  }else if(this)
+>>>>>>> 1f641ae (🎉)
 
 })
 
