@@ -159,37 +159,112 @@ $("#email").focusout(function(){
 })
 
 $(".phonenum input").focusout(function(){
-  let num = $(this).val();
-  let number = num.replace(/[^0-9.]/g, '');
+  let len = $(this).val()
 
-  let veri1;
-  if (num.length < 10 || num.length > 11) {
-    veri1 = false;
-  } else {
-    veri1 = true;
-  }
-
-  var veri2;
-  if (!isNaN(num)) {
-    veri2 = true;
-  } else {
-    veri2 = false;
-  }
-
-  console.log(veri1,veri2)
-
-  if(num.length == 0){
+  if(len.length == 0){
     $(".phone .warn").html('<span class="text-red">필수 정보입니다.</span>')
-  }else if(veri1 == true && veri2 == true){
-    phoneveri = true;
-    $(".phone .warn").html('<span class="text"">인증번호를 발송했습니다.(유효시간 30분) 인증번호가 오지 않으면 입력하신 정보가 정확한지 확인하여 주세요. 이미 가입된 번호이거나, 가상전화번호는 인증번호를 받을 수 없습니다.</span>')
+  }else{
+    $(".phone .warn").empty();
+  }
+})
+
+$("#veribtn").on("click",function(){
+  let phoneVal = $(".phonenum input").val();
+  phoneVal = phoneVal.replace(/[^0-9.]/g, '');
+
+  $(".phonenum input").val(phoneVal)
+
+  let phoneLen;
+  
+  if(phoneVal.length < 10 || phoneVal.length > 11){
+    phoneLen = false;
+  }else{
+    phoneLen = true;
+  }
+
+  let phoneNum;
+
+  if(!isNaN(phoneVal)){
+    phoneNum = true;
+  }else{
+    phoneNum = false;
+  }
+
+  if(phoneLen && phoneNum == true){
+    $(".phone .warn").html('<span class="text-green">인증번호를 발송했습니다.(유효시간 30분)<br> 인증번호가 오지 않으면 입력하신 정보가 정확한지 확인하여 주세요. 이미 가입된 번호이거나, 가상전화번호는 인증번호를 받을 수 없습니다.</span>')
     $(".phone .warn span").css("color","#03c75a")
-    $(".disinput").removeClass("disinput")
-    $("#veritext").prop("disabled",true)
+    $("#veritext").parent(".inputbox").removeClass("disinput")
+    $("#veritext").prop("disabled",false)
   }else{
     $(".phone .warn").html('<span class="text-red">형식에 맞지 않는 번호입니다.</span>')
+    $("#veritext").parent(".inputbox").addClass("disinput")
+    $("#veritext").prop("disabled",true)
+  }
+})
+
+$("#veritext").focusout(function(){
+  
+  if($(this).val() == 1234){
+    $(".phone .warn").html('<span class="text-green">인증되었습니다.</span>')
+    $(this).next("div").empty();
+    $(this).parent(".inputbox").removeClass("border-red")
+
+    phoneveri = true;
+
+  }else{
+    $(".phone .warn").html('<span class="text-red">인증번호를 다시 확인해주세요.</span>')
+    $(this).next("div").html('<span class="text-red">불일치</span><span class="disagree"></span>')
+    $(this).parent(".inputbox").addClass("border-red")
   }
 
-
-
 })
+
+
+
+function sample6_execDaumPostcode() {
+  new daum.Postcode({
+      oncomplete: function(data) {
+          // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+          // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+          // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+          var addr = ''; // 주소 변수
+          var extraAddr = ''; // 참고항목 변수
+
+          //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+          if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+              addr = data.roadAddress;
+          } else { // 사용자가 지번 주소를 선택했을 경우(J)
+              addr = data.jibunAddress;
+          }
+
+          // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+          if(data.userSelectedType === 'R'){
+              // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+              // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+              if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                  extraAddr += data.bname;
+              }
+              // 건물명이 있고, 공동주택일 경우 추가한다.
+              if(data.buildingName !== '' && data.apartment === 'Y'){
+                  extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+              }
+              // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+              if(extraAddr !== ''){
+                  extraAddr = ' (' + extraAddr + ')';
+              }
+              // 조합된 참고항목을 해당 필드에 넣는다.
+              document.getElementById("sample6_extraAddress").value = extraAddr;
+          
+          } else {
+              document.getElementById("sample6_extraAddress").value = '';
+          }
+
+          // 우편번호와 주소 정보를 해당 필드에 넣는다.
+          document.getElementById('sample6_postcode').value = data.zonecode;
+          document.getElementById("sample6_address").value = addr;
+          // 커서를 상세주소 필드로 이동한다.
+          document.getElementById("sample6_detailAddress").focus();
+      }
+  }).open();
+}
