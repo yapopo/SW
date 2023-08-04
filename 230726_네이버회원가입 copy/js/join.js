@@ -190,7 +190,7 @@ $("#veribtn").on("click",function(){
     phoneNum = false;
   }
 
-  if(phoneLen && phoneNum == true){
+  if(phoneLen , phoneNum == true){
     $(".phone .warn").html('<span class="text-green">인증번호를 발송했습니다.(유효시간 30분)<br> 인증번호가 오지 않으면 입력하신 정보가 정확한지 확인하여 주세요. 이미 가입된 번호이거나, 가상전화번호는 인증번호를 받을 수 없습니다.</span>')
     $(".phone .warn span").css("color","#03c75a")
     $("#veritext").parent(".inputbox").removeClass("disinput")
@@ -222,6 +222,9 @@ $("#veritext").focusout(function(){
 
 
 function sample6_execDaumPostcode() {
+
+  addressveri = true;
+
   new daum.Postcode({
       oncomplete: function(data) {
           // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
@@ -268,3 +271,16 @@ function sample6_execDaumPostcode() {
       }
   }).open();
 }
+
+$("#joinbtn").on("click",function(e){
+
+  if(idveri&&pwveri&&pwchkveri&&nameveri&&bitrhveri&&genderveri&&phoneveri&&addressveri&&mailveri){
+    $("#join-form").submit();
+  }else{
+    e.preventDefault();
+    $("input").trigger("focusout");
+  }
+
+})
+
+console.log(idveri, pwveri, pwchkveri, nameveri, bitrhveri, genderveri, phoneveri, addressveri,mailveri)
