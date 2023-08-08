@@ -8,7 +8,11 @@ $('input').focusout(function(){
   $(this).parent('.inputbox').removeClass('border-act');
 })
 
+<<<<<<< HEAD
+let idveri, pwveri, pwchkveri, nameveri, bitrhveri, genderveri, phoneveri, addressveri = false;
+=======
 let idveri= pwveri= pwchkveri= nameveri= bitrhveri= genderveri= phoneveri= addressveri = false;
+>>>>>>> fc191a9042ddeb3ab236a17fe4e3a11f3346aefd
 let mailveri = true;
 
 
@@ -41,8 +45,11 @@ $('.userpw input').focusout(function(){
 
   if(userPw.length == 0) {
     $('.userpw .warn').html('<span class="text-red">필수정보 입니다.</span>')
+<<<<<<< HEAD
+=======
     $(".userpw .inputbox span").empty();
     $('.userpw .inputbox img').attr('src', './imgs/m_icon_pw_step_01.png')
+>>>>>>> fc191a9042ddeb3ab236a17fe4e3a11f3346aefd
   } else if(!pwExp.test(userPw)) {
     $('.userpw .warn').html('<span class="text-red">8~20자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</span>')
     $('.userpw .inputbox p').html('<span class="text-red">사용불가</span>');
@@ -53,6 +60,9 @@ $('.userpw input').focusout(function(){
     $('.userpw .inputbox p').html('<span class="text-green">안전</span>');
     $('.userpw .inputbox img').attr('src', './imgs/m_icon_pw_step_04.png')
   }
+<<<<<<< HEAD
+})
+=======
 })
 
 $('.userpw-chk input').focusout(function(){
@@ -285,3 +295,4 @@ $("#joinbtn").on("click",function(e){
 })
 
 console.log(idveri, pwveri, pwchkveri, nameveri, bitrhveri, genderveri, phoneveri, addressveri,mailveri)
+>>>>>>> fc191a9042ddeb3ab236a17fe4e3a11f3346aefd

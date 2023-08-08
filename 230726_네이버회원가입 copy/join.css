@@ -40,7 +40,11 @@ a {
 }
 
 .inputbox input {
+<<<<<<< HEAD
+  width: 80%;
+=======
   width: 70%;
+>>>>>>> fc191a9042ddeb3ab236a17fe4e3a11f3346aefd
   height: 100%;
   border: none;
   outline: none;
@@ -49,7 +53,11 @@ a {
 }
 
 .inputbox div {
+<<<<<<< HEAD
+  width: 20%;
+=======
   width: 30%;
+>>>>>>> fc191a9042ddeb3ab236a17fe4e3a11f3346aefd
   height: 100%;
   display: flex;
   justify-content: flex-end;
