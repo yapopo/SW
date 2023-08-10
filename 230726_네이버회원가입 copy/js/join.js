@@ -114,6 +114,7 @@ $('#year, #month, #date').focusout(function(){
   let birth = new Date(year,month,date);
   let nowStamp = now.getTime();
 
+  
   now = now.getFullYear();
   birth = birth.getTime();
 
