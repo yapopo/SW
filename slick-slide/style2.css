@@ -22,3 +22,10 @@
   top: 350px;
   left: 600px;
 }
+
+.stop {
+  position: absolute;
+  padding: 10px;
+  top: 350px;
+  left: 540px;
+}
