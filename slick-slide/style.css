@@ -1,0 +1,21 @@
+
+body {
+    background: peachpuff;
+}
+
+.slider {
+    width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.slick-dots {
+    bottom: 10px;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    line-height: 10px;
+    color: #fff;
+}
