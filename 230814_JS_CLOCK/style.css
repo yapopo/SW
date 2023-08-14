@@ -1,0 +1,167 @@
+@font-face {
+  font-family: Orbitron;
+  src: url('./fonts/Orbitron-Regular.eot');
+  src: url('./fonts/Orbitron-Regular.woff') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Orbitron, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper.morning {
+  background-image: url(./images/bg_morning.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper.afternoon {
+  background-image: url(./images/bg_afternoon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper.evening {
+  background-image: url(./images/bg_evening.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper.night {
+  background-image: url(./images/bg_night.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px 20px 30px;
+}
+
+.logo img {
+  height: 70px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li a{
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+main {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+  padding-left: 80px;
+}
+
+.b-title {
+  font-size: 50px;
+}
+
+.clock {
+  position: absolute;
+  top: 215px;
+  left: 270px;
+  z-index: 10;
+  font-size: 60px;
+}
+
+
+.phone {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.phone-img img  {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.cloud2 {
+  z-index: 10;
+}
+
+footer {
+  width: 100%;
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  padding: 40px;
+}
+
+button {
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px 0;
+  margin-right: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button.active {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+}
+
+aside img {
+  display: inline-block;
+  height: 300px;
+}
+
