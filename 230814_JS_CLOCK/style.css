@@ -27,11 +27,35 @@ a {
   position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper.morning {
   background-image: url(./images/bg_morning.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden;
+}
+
+.wrapper.afternoon {
+  background-image: url(./images/bg_afternoon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper.evening {
+  background-image: url(./images/bg_evening.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper.night {
+  background-image: url(./images/bg_night.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 header {
@@ -75,6 +99,14 @@ main {
   font-size: 50px;
 }
 
+.clock {
+  position: absolute;
+  top: 215px;
+  left: 250px;
+  z-index: 10;
+  font-size: 60px;
+}
+
 
 .phone {
   width: 60%;
@@ -84,11 +116,8 @@ main {
 
 
 .phone-img img  {
-  width: 100%;
-  height: 100%;
-  transform: scale(1.2);
-  margin-top: 100px;
-  margin-left: 200px;
+  width: auto;
+  height: auto;
   object-fit: cover;
 }
 
