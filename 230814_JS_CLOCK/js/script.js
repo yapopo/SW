@@ -1,3 +1,13 @@
+function night(){
+  if($("button").hasClass("active").hasClass("night")){
+    $(".wrapper").css("color","#fff")
+    $("nav ul li a").css("color","#fff")
+    $(".logo").find("img").attr("src","./images/logo_w.png")
+  }
+}
+
+// 시계
+
 const clock = document.querySelector(".clock")
 
 function getClock() {
@@ -10,7 +20,6 @@ function getClock() {
 
 getClock();
 setInterval(getClock, 1000);
-
 
 
 

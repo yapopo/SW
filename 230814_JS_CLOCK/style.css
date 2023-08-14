@@ -102,7 +102,7 @@ main {
 .clock {
   position: absolute;
   top: 215px;
-  left: 250px;
+  left: 270px;
   z-index: 10;
   font-size: 60px;
 }
@@ -114,11 +114,14 @@ main {
   position: relative;
 }
 
-
 .phone-img img  {
   width: auto;
   height: auto;
   object-fit: cover;
+}
+
+.cloud2 {
+  z-index: 10;
 }
 
 footer {
@@ -148,5 +151,17 @@ button.active {
 
 button:last-child {
   margin-right: 0;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+}
+
+aside img {
+  display: inline-block;
+  height: 300px;
 }
 
