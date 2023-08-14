@@ -1,9 +1,117 @@
 @font-face {
   font-family: Orbitron;
-  src: url('./fonts/Orbitron-Regular.woff') format(woff);
   src: url('./fonts/Orbitron-Regular.eot');
+  src: url('./fonts/Orbitron-Regular.woff') format('woff');
 }
 
-h1 {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Orbitron, sans-serif;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/bg_morning.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px 20px 30px;
+}
+
+.logo img {
+  height: 70px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li a{
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+main {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+  padding-left: 80px;
+}
+
+.b-title {
+  font-size: 50px;
+}
+
+
+.phone {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+
+.phone-img img  {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
+  margin-top: 100px;
+  margin-left: 200px;
+  object-fit: cover;
+}
+
+footer {
+  width: 100%;
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  padding: 40px;
+}
+
+button {
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px 0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
