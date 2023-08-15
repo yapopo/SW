@@ -28,6 +28,7 @@ a {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  z-index: -10;
 }
 
 .wrapper.morning {
@@ -101,9 +102,8 @@ main {
 
 .clock {
   position: absolute;
-  top: 215px;
-  left: 270px;
-  z-index: 10;
+  top: 210px;
+  left: 260px;
   font-size: 60px;
 }
 
@@ -120,10 +120,6 @@ main {
   object-fit: cover;
 }
 
-.cloud2 {
-  z-index: 10;
-}
-
 footer {
   width: 100%;
 }
@@ -132,6 +128,7 @@ footer {
   width: 100%;
   display: flex;
   padding: 40px;
+
 }
 
 button {
@@ -141,7 +138,7 @@ button {
   padding: 10px 0;
   margin-right: 10px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 100;
 }
 
 button.active {
@@ -157,7 +154,7 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 12;
+  z-index: -1;
 }
 
 aside img {
