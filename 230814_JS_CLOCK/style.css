@@ -1,7 +1,7 @@
 @font-face {
   font-family: Orbitron;
-  src: url('./fonts/Orbitron-Regular.eot');
-  src: url('./fonts/Orbitron-Regular.woff') format('woff');
+  src : url('./fonts/Orbitron-Regular.eot');
+  src : url('./fonts/Orbitron-Regular.woff') format('woff');
 }
 
 * {
@@ -10,155 +10,313 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Orbitron, sans-serif;
-}
-
 li {
   list-style: none;
 }
 
 a {
+  color: #555;
   text-decoration: none;
-  color: #000;
+}
+
+body {
+ font-family: Orbitron, sans-serif; 
 }
 
 .wrapper {
-  position: relative;
-  width: 100vw;
+  position: fixed;
+  width: 100%;
   height: 100vh;
-  overflow: hidden;
-  z-index: -10;
-}
-
-.wrapper.morning {
-  background-image: url(./images/bg_morning.jpg);
+  z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size : cover;
+}
+
+/* 전체화면 배경 class */
+.wrapper.morning {
+  background-image: url('./images/bg_morning.jpg');
 }
 
 .wrapper.afternoon {
-  background-image: url(./images/bg_afternoon.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url('./images/bg_afternoon.jpg');
 }
 
 .wrapper.evening {
-  background-image: url(./images/bg_evening.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url('./images/bg_evening.jpg');
 }
 
 .wrapper.night {
-  background-image: url(./images/bg_night.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url('./images/bg_night.jpg');
 }
 
-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px 20px 30px;
+.wrapper.night .logo {
+ background-image: url(./images/logo_w.png);
 }
 
-.logo img {
-  height: 70px;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav ul li a{
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-main {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  align-items: center;
-}
-
-.title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 40%;
-  height: 100%;
-  padding-left: 80px;
-}
-
-.b-title {
-  font-size: 50px;
-}
-
-.clock {
-  position: absolute;
-  top: 210px;
-  left: 260px;
-  font-size: 60px;
-}
-
-
-.phone {
-  width: 60%;
-  height: 100%;
-  position: relative;
-}
-
-.phone-img img  {
-  width: auto;
-  height: auto;
-  object-fit: cover;
-}
-
-footer {
-  width: 100%;
-}
-
-.btns {
-  width: 100%;
-  display: flex;
-  padding: 40px;
-
-}
-
-button {
-  width: 25%;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  padding: 10px 0;
-  margin-right: 10px;
-  cursor: pointer;
-  z-index: 100;
-}
-
-button.active {
-  background-color: rgba(0, 0, 0, 0.7);
+.wrapper.night .gnb-list li a {
   color: #fff;
 }
 
-button:last-child {
+.wrapper.night .gnb-list li a::after {
+  border-color: #fff;
+}
+
+.wrapper.night .txt p,
+.wrapper.night .txt em {
+  color: #999;
+}
+
+.wrapper.night .txt strong{
+  color: #fff;
+}
+
+.wrapper.night .phone-time {
+  color: #fff;
+} 
+
+/* 전체화면 구름 1,2 */
+.wrapper > img:nth-child(1) {
+  position: absolute;
+  top: 45px;
+  left: 15px;
+  z-index: -1;
+  width: 800px;
+  opacity: 0.8;
+  animation-name: cloud1 ;
+  animation-duration: 100s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.wrapper > img:nth-child(2) {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: -1;
+  width: 1000px;
+  opacity: 0.6;
+  animation: cloud2 60s linear infinite ;
+}
+
+.global-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+.logo {
+  width: 90px;
+  height: 80px;
+  background-image: url('./images/logo_b.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.gnb-list li {
+  margin-right: 30px;
+}
+
+.gnb-list li:last-child {
   margin-right: 0;
 }
 
-aside {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.gnb-list li a {
+  font-weight: 700;
 }
 
-aside img {
-  display: inline-block;
-  height: 300px;
+.gnb-list li a::after {
+  content: '';
+  display: block;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #444;
+  /* 중심점이 가상 요소의 가운데로 설정 */
+  transform: scaleX(0);
+  transition: transform 500ms;
 }
+
+.gnb-list li a:hover::after {
+  transform: scaleX(1);
+}
+
+.txt {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+}
+
+.txt p {
+  font-size: 48px;
+  color: #666;
+}
+
+.txt p strong {
+  color: #333;
+}
+
+.txt em {
+  font-size: 14px;
+  color: #666;
+}
+
+#phone {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 660px;
+  height: 620px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+
+/* phone background-image 변경 */
+.wrapper.morning #phone {
+  background-image: url('./images/phone_morning.png');
+}
+
+.wrapper.afternoon #phone {
+  background-image: url('./images/phone_afternoon.png');
+}
+
+.wrapper.evening #phone {
+  background-image: url('./images/phone_evening.png');
+}
+
+.wrapper.night #phone {
+  background-image: url('./images/phone_night.png');
+}
+
+#phone div {
+  position: absolute;
+  top: 74px;
+  left: 102px;
+  width: 420px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.phone-time {
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  z-index: 10;
+  transform: translateY(-50%);
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+}
+
+#phone img:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  animation: cloud-p1 80s linear infinite ;
+}
+
+#phone img:last-of-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 800px;
+  animation: cloud-p2 50s linear infinite ;
+}
+
+.btns {
+  position: fixed;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.btn-list {
+  display: flex;
+}
+
+.btn-list li {
+  width: 25%;
+  height: 35px;
+  margin-right: 8px;
+}
+
+.btn-list li:last-child {
+  margin-right: 0;
+}
+
+.btn-list li a {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  background-color: #fff;
+  opacity: 0.6;
+  /* 자간 : 글자와 글자 사이 간격 */
+  letter-spacing: 3px;
+  padding: 5px 0;
+  color: #111;
+}
+
+.btn-list li:hover a,
+.btn-wrapper li.on a {
+  color: #ddd;
+  background-color: #111;
+}
+
+@keyframes cloud1 {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+
+@keyframes cloud2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 1200px;
+  }
+  60% {
+    left: -1200px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes cloud-p1 {
+  0% {
+    left: -600px;
+  }
+  100% {
+    left: 600px;
+  }
+}
+
+@keyframes cloud-p2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 500px;
+  }
+  60% {
+    left: -500px
+  }
+  100% {
+    left: 0;
+  }
+}
+
+
 
