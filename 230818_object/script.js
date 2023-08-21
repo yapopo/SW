@@ -30,14 +30,53 @@ let products = [
   // console.log(document.querySelector(".sho-info p"))
 
 
-document.querySelectorAll(".box-item img").forEach((i,index)=>{
-  i.src = products[index].img
-})
+// document.querySelectorAll(".box-item img").forEach((i,index)=>{
+//   i.src = products[index].img
+// })
 
-let info = document.querySelectorAll(".sho-info")
+// let info = document.querySelectorAll(".sho-info")
 
-info.forEach((i,index)=>{
-  i.querySelector("h2").innerHTML = products[index].title
-  i.querySelectorAll("p")[0].innerHTML = products[index].price
-  i.querySelectorAll("p")[1].innerHTML = products[index].size
+// info.forEach((i,index)=>{
+//   i.querySelector("h2").innerHTML = products[index].title
+//   i.querySelectorAll("p")[0].innerHTML = products[index].price
+//   i.querySelectorAll("p")[1].innerHTML = products[index].size
+// })
+
+// 확장성이 좋다
+
+
+// let boxItem = document.createElement("div");
+// boxItem.classList.add("box-item")
+// document.querySelector(".box-list").appendChild(boxItem);
+
+// let shoInfo = document.createElement("div");
+// shoInfo.classList.add("sho-info")
+// boxItem.appendChild(shoInfo);
+
+// let h2Tag = document.createElement("h2");
+// let pTag = document.createElement("p")
+
+// shoInfo.append(h2Tag,pTag)
+
+
+products.forEach((i,index)=>{
+  let boxItem = document.createElement("div");
+  boxItem.classList.add("box-item")
+  document.querySelector(".box-list").appendChild(boxItem);
+  
+  let image = new Image();
+  boxItem.appendChild(image)
+  image.src = i.img
+
+  let shoInfo = document.createElement("div");
+  shoInfo.classList.add("sho-info")
+  boxItem.appendChild(shoInfo);
+
+  let h2Tag = document.createElement("h2");
+  let pTag1 = document.createElement("p")
+  let pTag2 = document.createElement("p")
+  h2Tag.innerHTML = i.title
+  pTag1.innerHTML = i.price
+  pTag2.innerHTML = i.size
+  shoInfo.append(h2Tag,pTag1,pTag2)
 })
