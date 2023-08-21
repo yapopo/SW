@@ -78,24 +78,54 @@ let products = [
 // shoInfo.append(h2Tag,pTag)
 
 
-products.forEach((i,index)=>{
+// products.forEach((i,index)=>{
+//   let boxItem = document.createElement("div");
+//   boxItem.classList.add("box-item")
+//   document.querySelector(".box-list").appendChild(boxItem);
+  
+//   let image = new Image();
+//   boxItem.appendChild(image)
+//   image.src = i.img
+
+//   let shoInfo = document.createElement("div");
+//   shoInfo.classList.add("sho-info")
+//   boxItem.appendChild(shoInfo);
+
+//   let h2Tag = document.createElement("h2");
+//   let pTag1 = document.createElement("p")
+//   let pTag2 = document.createElement("p")
+//   h2Tag.innerHTML = i.title
+//   pTag1.innerHTML = i.price
+//   pTag2.innerHTML = i.size
+//   shoInfo.append(h2Tag,pTag1,pTag2)
+// })
+
+
+// insertAdjacentHTML() >> 문자형 html을 넣어주는 함수
+// 
+
+// let pTag = "<p class='txt'>트랜스포머!몰댄밋츠디아이즈~</p>"
+// document.querySelector(".box-list").insertAdjacentHTML("beforeend",pTag)
+
+products.forEach((i)=>{
   let boxItem = document.createElement("div");
   boxItem.classList.add("box-item")
   document.querySelector(".box-list").appendChild(boxItem);
-  
-  let image = new Image();
-  boxItem.appendChild(image)
-  image.src = i.img
+
+  let image = `<img src='${i.img}' alt=''>`
+  boxItem.insertAdjacentHTML("beforeend",image)
 
   let shoInfo = document.createElement("div");
   shoInfo.classList.add("sho-info")
   boxItem.appendChild(shoInfo);
 
-  let h2Tag = document.createElement("h2");
-  let pTag1 = document.createElement("p")
-  let pTag2 = document.createElement("p")
-  h2Tag.innerHTML = i.title
-  pTag1.innerHTML = i.price
-  pTag2.innerHTML = i.size
-  shoInfo.append(h2Tag,pTag1,pTag2)
+  let h2Title = `<h2>${i.title}</h2>`
+  shoInfo.insertAdjacentHTML("beforeend",h2Title)
+
+  let pPrice = `<p>${i.price}</p>`
+  shoInfo.insertAdjacentHTML("beforeend",pPrice)
+
+  let pSize = `<p>${i.size}</p>`
+  shoInfo.insertAdjacentHTML("beforeend",pSize)
+
 })
