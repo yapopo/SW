@@ -1,0 +1,21 @@
+.pop-up {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.popup-content {
+  background-color: #fff;
+  width: 500px;
+  padding: 30px;
+}
+
+#close-btn {
+  margin-top: 20px;
+}
