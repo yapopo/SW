@@ -107,26 +107,40 @@ let products = [
 // let pTag = "<p class='txt'>트랜스포머!몰댄밋츠디아이즈~</p>"
 // document.querySelector(".box-list").insertAdjacentHTML("beforeend",pTag)
 
-products.forEach((i,index)=>{
-  let boxItem = `<div class="box-item"></div>`;
-  document.querySelector(".box-list").insertAdjacentHTML("beforeend", boxItem);
+// products.forEach((i,index)=>{
+//   let boxItem = `<div class="box-item"></div>`;
+//   document.querySelector(".box-list").insertAdjacentHTML("beforeend", boxItem);
 
-  let image = `<img src='${i.img}' alt='${i.title}'>`;
-  document.querySelectorAll(".box-item")[index].insertAdjacentHTML("beforeend",image)
+//   let image = `<img src='${i.img}' alt='${i.title}'>`;
+//   document.querySelectorAll(".box-item")[index].insertAdjacentHTML("beforeend",image)
 
-  let shoInfo = `<div class ="sho-info"></div>`;
-  document.querySelectorAll(".box-item")[index].insertAdjacentHTML("beforeend",shoInfo)
+//   let shoInfo = `<div class ="sho-info"></div>`;
+//   document.querySelectorAll(".box-item")[index].insertAdjacentHTML("beforeend",shoInfo)
 
-  let h2Title = `<h2>${i.title}</h2>`
-  document.querySelectorAll(".sho-info")[index].insertAdjacentHTML("beforeend",h2Title)
+//   let h2Title = `<h2>${i.title}</h2>`
+//   document.querySelectorAll(".sho-info")[index].insertAdjacentHTML("beforeend",h2Title)
 
-  let pPrice = `<p>${i.price}</p>`
-  document.querySelectorAll(".sho-info")[index].insertAdjacentHTML("beforeend",pPrice)
+//   let pPrice = `<p>${i.price}</p>`
+//   document.querySelectorAll(".sho-info")[index].insertAdjacentHTML("beforeend",pPrice)
 
-  let pSize = `<p>${i.size}</p>`
-  document.querySelectorAll(".sho-info")[index].insertAdjacentHTML("beforeend",pSize)
+//   let pSize = `<p>${i.size}</p>`
+//   document.querySelectorAll(".sho-info")[index].insertAdjacentHTML("beforeend",pSize)
 
-})
+// })
 
 // backtick 이용한 축약
+
+products.forEach(function(i){
+
+  let boxItem = `<div class="box-item">
+    <img src="${i.img}" alt="${i.title}">
+    <div class="sho-info">
+      <h2>${i.title}</h2>
+      <p>${i.price}</p>
+      <p>${i.size}</p>
+     </div>
+  </div>`
+
+  document.querySelector(".box-list").insertAdjacentHTML("beforeend", boxItem)
+})
 
