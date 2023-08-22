@@ -107,25 +107,26 @@ let products = [
 // let pTag = "<p class='txt'>트랜스포머!몰댄밋츠디아이즈~</p>"
 // document.querySelector(".box-list").insertAdjacentHTML("beforeend",pTag)
 
-products.forEach((i)=>{
-  let boxItem = document.createElement("div");
-  boxItem.classList.add("box-item")
-  document.querySelector(".box-list").appendChild(boxItem);
+products.forEach((i,index)=>{
+  let boxItem = `<div class="box-item"></div>`;
+  document.querySelector(".box-list").insertAdjacentHTML("beforeend", boxItem);
 
-  let image = `<img src='${i.img}' alt=''>`
-  boxItem.insertAdjacentHTML("beforeend",image)
+  let image = `<img src='${i.img}' alt='${i.title}'>`;
+  document.querySelectorAll(".box-item")[index].insertAdjacentHTML("beforeend",image)
 
-  let shoInfo = document.createElement("div");
-  shoInfo.classList.add("sho-info")
-  boxItem.appendChild(shoInfo);
+  let shoInfo = `<div class ="sho-info"></div>`;
+  document.querySelectorAll(".box-item")[index].insertAdjacentHTML("beforeend",shoInfo)
 
   let h2Title = `<h2>${i.title}</h2>`
-  shoInfo.insertAdjacentHTML("beforeend",h2Title)
+  document.querySelectorAll(".sho-info")[index].insertAdjacentHTML("beforeend",h2Title)
 
   let pPrice = `<p>${i.price}</p>`
-  shoInfo.insertAdjacentHTML("beforeend",pPrice)
+  document.querySelectorAll(".sho-info")[index].insertAdjacentHTML("beforeend",pPrice)
 
   let pSize = `<p>${i.size}</p>`
-  shoInfo.insertAdjacentHTML("beforeend",pSize)
+  document.querySelectorAll(".sho-info")[index].insertAdjacentHTML("beforeend",pSize)
 
 })
+
+// backtick 이용한 축약
+
