@@ -121,6 +121,11 @@ input:focus {
   display: none;
 }
 
+.pw-show.active {
+  display: block;
+  cursor: pointer;
+}
+
 
 .form-box button {
   width: 300px;

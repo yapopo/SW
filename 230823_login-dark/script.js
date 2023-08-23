@@ -10,10 +10,11 @@ $("#id").keypress(function(){
 
 $("#pw").keypress(function(){
   let userPw = $(this).val();
-
+  
   if(userPw.length > 0){
     $(".pw").addClass("on")
     $("input").addClass("on")
+    $(".pw-show").addClass("active")
   }
 })
 
@@ -32,5 +33,6 @@ $("#pw").keydown(function(){
   if(userPw.length == 0){
     $(".pw").removeClass("on")
     $("#pw").removeClass("on")
+    $(".pw-show").removeClass("active")
   }
 })
