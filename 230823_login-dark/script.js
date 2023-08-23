@@ -5,6 +5,7 @@ $("#id").keyup(function(){
   if(userId.length > 0){
     $(".id").addClass("on")
     $("#id").addClass("on")
+    $(".login").attr("disabled", false)
   }else{
     $(".id").removeClass("on")
     $("#id").removeClass("on")
@@ -35,4 +36,41 @@ $(".pw-show").click(function(){
     $(this).text("비밀번호 표시")
     $("#pw").attr("type","password")
   }
+})
+
+$("input").keyup(function(){
+  let idLen = $("#id").val().length;
+  let pwLen = $("#pw").val().length;
+  let len = idLen + pwLen
+
+  console.log(len)
+
+  if(len == 0){
+    $(".login").attr("disabled", true)
+  }else{
+    $(".login").attr("disabled", false)
+  }
+})
+
+$(".mode").click(function(){
+  $(".wrapper").toggleClass("dark")
+  $(".box1").toggleClass("dark")
+  $("input").toggleClass("dark")
+  $(".box2").toggleClass("dark")
+  $(".download").toggleClass("dark")
+  $(".mode").toggleClass("dark")
+  $(".logo").toggleClass("dark")
+
+  if($(".mode").hasClass("dark")){
+    $(".mode").text("Light mode")
+  }else{
+    $(".mode").text("Dark mode")
+  }
+
+  if($(".logo").hasClass("dark")){
+    $(".logo img").attr("src","./images/logo-dark.png")
+  }else{
+    $(".logo img").attr("src","./images/logo-light.png")
+  }
+
 })

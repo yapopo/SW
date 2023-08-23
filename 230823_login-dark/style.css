@@ -42,6 +42,10 @@ li {
   background-color: #fafafa;
 }
 
+.wrapper.dark {
+  background-color: #151515;
+}
+
 .box1 {
   margin-top: 50px;
   width: 450px;
@@ -51,12 +55,17 @@ li {
   z-index: -100;
 }
 
-.title {
+.box1.dark {
+  background-color: #151515;
+  border-color: #262626;
+}
+
+.logo {
   text-align: center;
   padding: 30px 0;
 }
 
-.title img{
+.logo img{
   height: 60px;
 }
 
@@ -86,6 +95,11 @@ input {
   width: 300px;
   padding: 15px;
   border: 1px solid #d2d2d2;
+}
+
+input.dark {
+  background-color: #151515;
+  color: #d2d2d2;
 }
 
 input.on {
@@ -136,7 +150,13 @@ input:focus {
   margin-top: 15px;
   border-radius: 5px;
   font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.form-box button:disabled,
+.form-box button[disabled]{
   opacity: 0.3;
+  cursor: default;
 }
 
 .line {
@@ -206,6 +226,12 @@ input:focus {
   background-color: #fff;
 }
 
+.box2.dark {
+  background-color: #151515;
+  border-color: #262626;
+  color: #d2d2d2;
+}
+
 .join {
   margin-left: 5px;
   color: #0095f6;
@@ -217,6 +243,10 @@ input:focus {
   width: 450px;
   text-align: center;
   padding: 30px 0;
+}
+
+.download.dark {
+  color: #d2d2d2;
 }
 
 .store{
