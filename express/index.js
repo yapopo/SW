@@ -29,6 +29,9 @@ app.listen(7000, function(){
   console.log('7000번 포트')
 })
 
+app.use(express.static(__dirname))
+
+
 
 // 서버 : 요청한 정보를 보내주는 프로그램
 // HTTP 요청 방식 네가지
@@ -61,6 +64,14 @@ app.get("/test",function(requests,response){
 
 app.get("/login",function(requests,response){
   response.sendFile(__dirname + '/login.html')
+})
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended : true}))
+
+app.post('/add', function(requests,response){
+  response.send("전송완료!")
+  console.log(requests.body.id)
 })
 
 // /map으로 만들기
