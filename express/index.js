@@ -79,3 +79,21 @@ app.post('/add', function(requests,response){
 app.get("/map",function(requests,response){
   response.sendFile(__dirname + '/map.html')
 })
+
+
+// 연결하기
+
+let db;
+const MongoClient = require("mongodb").MongoClient;
+
+MongoClient.connect('mongodb+srv://admin:jellc8738@test.tithxy6.mongodb.net/?retryWrites=true&w=majority’', function(error,client){
+  
+if(error){
+  return console.log("error")
+}
+
+db = client.db("DATA");
+app.listen('7070',function(){
+  console.log("success")
+})
+})
