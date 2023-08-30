@@ -46,7 +46,7 @@ const app = express();
 // 내 컴퓨터에서 7000번 포트로 진입 했을 때,
 // 콜백함수 안에 있는 코드 실행
 // localhost:7000(port number)
-app.listen(7000, function(){
+app.listen(7700, function(){
   console.log('7000번 포트')
 })
 
@@ -145,7 +145,8 @@ MongoClient.connect('mongodb+srv://admin:jellc8738@cluster0.muby3x1.mongodb.net/
   }
 
   db = client.db('DATA');
-  app.listen('7700', function(){
+  
+  app.listen('8800', function(){
     console.log('전송!')
   })
 })
@@ -160,7 +161,7 @@ app.post('/add', function(requests, response){
   })
 })
 
-// /add로 접속하면 GET 요청으로 DB에 저장된 데이터를 보여준다.
+// add로 접속하면 GET 요청으로 DB에 저장된 데이터를 보여준다.
 // npm install ejs
 // .html -> .ejs
 app.set('view engine', 'ejs');
@@ -169,7 +170,7 @@ app.get('/add', function(requests, response){
   // post라는 collection에 저장된 데이터를 꺼낸다.
   db.collection('post').find().toArray(function(error, result){
     console.log(result)
+    response.render('data.ejs', {log : result})
   })
 
-  response.render('DATA.ejs', {log : result})
 })
