@@ -69,10 +69,10 @@ app.get("/login",function(requests,response){
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended : true}))
 
-app.post('/add', function(requests,response){
-  response.send("전송완료!")
-  console.log(requests.body.id)
-})
+// app.post('/add', function(requests,response){
+//   response.send("전송완료!")
+//   console.log(requests.body.id)
+// })
 
 // /map으로 만들기
 
@@ -86,7 +86,7 @@ app.get("/map",function(requests,response){
 let db;
 const MongoClient = require("mongodb").MongoClient;
 
-MongoClient.connect('mongodb+srv://admin:jellc8738@test.tithxy6.mongodb.net/?retryWrites=true&w=majority’', function(error,client){
+MongoClient.connect('mongodb+srv://admin:jellc8738@cluster0.muby3x1.mongodb.net/?retryWrites=true&w=majority', function(error,client){
   
 if(error){
   return console.log("error")
@@ -96,4 +96,13 @@ db = client.db("DATA");
 app.listen('7070',function(){
   console.log("success")
 })
+})
+
+app.post('/add',function(requests,response){
+  console.log(requests.body)
+  response.send("전송완료!")
+
+  db.collection("post").insertOne({아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error,result){
+    console.log("db에 저장완료!")
+  })
 })
