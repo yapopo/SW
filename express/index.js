@@ -158,17 +158,19 @@ app.post('/data', function(requests, response){
   response.send('전송 완료!')
 
   db.collection('post').insertOne({_id : 1, 아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
+    console.log(error)
     console.log('db에 저장완료!')
   })
+
+  db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
+    if(error) {
+      return console.log(error)
+    }
+  })
+
 })
 
-// 새로운 데이터의 입력을 받아오기
 
-db.collection("total").updateOne({name : "dataLength"}, {$inc : {totalData : 1}}, function(error,result){
- if(error){
-  console.log(error)
- }
-})
 
 
 // add로 접속하면 GET 요청으로 DB에 저장된 데이터를 보여준다.
