@@ -1,6 +1,8 @@
 .wrapper {
   width: 700px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 /* .slide-for {
@@ -35,7 +37,7 @@
 }
 
 .slider-nav > div {
-  width: 50px;
+  width: 300px;
   height: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -43,3 +45,12 @@
   line-height: 50px;
 }
 
+.slider-nav .slick-current {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* .slider-nav .slick-slide:first-child {
+  position: absolute;
+  top: -20px;
+  right: -600px;
+} */

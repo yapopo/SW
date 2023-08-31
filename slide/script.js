@@ -6,13 +6,13 @@ $(function() {
       asNavFor: '.slider-nav',
       autoplay: true,
       autoplaySpeed : 2000,
-      infinite: false       
+      infinite: true       
   });
 
   $('.slider-nav').slick({
       //메인슬라이드 버튼
       slidesToShow: 5,
-      slidesToScroll: 1,
+      slidesToScroll: 5,
       asNavFor: '.slider-for',
       focusOnSelect: true,
       autoplay: true,
