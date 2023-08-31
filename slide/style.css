@@ -9,11 +9,22 @@
 
 } */
 
+.slick-list {
+  overflow: visible;
+  /* width: 300px;
+  height: 250px; */
+  margin-right: 100px;
+}
+
 .slider-for > div {
   width: 300px;
   height: 250px;
   text-align: center;
   line-height: 250px;
+}
+
+.slider-for .slick-list {
+  overflow: hidden;
 }
 
 .back1 {
@@ -36,10 +47,22 @@
   background-color: blue;
 }
 
-.slider-nav > div {
+.slider-nav {
+  position: relative;
   width: 300px;
+  height: 250px;
+  z-index: 100;
+}
+
+.slider-nav .slick-list {
+  width: 100%;
+  position: absolute;
+}
+
+.slider-nav > div {
+  width: auto;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   color: #fff;
   text-align: center;
   line-height: 50px;
@@ -49,6 +72,42 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.slider-nav .slick-track {
+  width: 100%;
+  height: 250px;
+}
+
+.slider-nav .slick-slide {
+  width: 120px;
+  height: 50px;
+}
+
 .slider-nav .slick-slide:first-child {
-  position: ;
+  width: 120px;
+  position: absolute;
+  top: 60px;
+}
+
+.slider-nav .slick-slide:nth-child(2) {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+.slider-nav .slick-slide:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+
+.slider-nav .slick-slide:nth-child(4) {
+  position: absolute;
+  top: 70px;
+  right: 0;
+}
+
+.slider-nav .slick-slide:last-child {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

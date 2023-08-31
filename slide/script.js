@@ -6,7 +6,8 @@ $(function() {
       asNavFor: '.slider-nav',
       autoplay: true,
       autoplaySpeed : 2000,
-      infinite: true       
+      infinite: true,
+      arrows : false       
   });
 
   $('.slider-nav').slick({
@@ -18,6 +19,7 @@ $(function() {
       autoplay: true,
       infinite: false,
       swipe: false,
-      swipeToSlide: false		
+      swipeToSlide: false,
+      arrows : false		
   });
 });
