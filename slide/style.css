@@ -1,0 +1,45 @@
+.wrapper {
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* .slide-for {
+
+} */
+
+.slider-for > div {
+  width: 300px;
+  height: 250px;
+  text-align: center;
+  line-height: 250px;
+}
+
+.back1 {
+  background-color: aqua;
+}
+
+.back2{
+  background-color: violet;
+}
+
+.back3{
+  background-color:blanchedalmond;
+}
+
+.back4{
+  background-color: red;
+}
+
+.back5{
+  background-color: blue;
+}
+
+.slider-nav > div {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+
