@@ -157,16 +157,26 @@ app.post('/data', function(requests, response){
   console.log(requests.body)
   response.send('전송 완료!')
 
-  db.collection('post').insertOne({_id : 1, 아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
-    console.log(error)
-    console.log('db에 저장완료!')
+  // db total collextion에서 갯수 가져오기
+
+  db.collection('total').findOne({name : 'dataLength'}, function(error,result){
+    console.log(result.totalData)
+
+    let totalDataLength = result.totalData;
+
+    db.collection('post').insertOne({_id : totalDataLength + 1, 아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
+      console.log(error)
+      console.log('db에 저장완료!')
+    })
+  
+    db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
+      if(error) {
+        return console.log(error)
+      }
+    })
+
   })
 
-  db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
-    if(error) {
-      return console.log(error)
-    }
-  })
 
 })
 
