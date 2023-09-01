@@ -8,9 +8,13 @@
 <body>
   <h1>DB에서 받아온 데이터</h1>
   <% for(let i = 0; i < log.length; i++) { %>
-    <div class="info-box">
+    <div class="info-box" style="border: 1px solid
+     #ccc; margin-bottom: 10px; 
+     border-radius: 10px;
+     padding: 0 30px;" >
       <h3>ID : <%= log[i].아이디 %></h3>
       <h3>PW : <%= log[i].비밀번호 %></h3>
+      <h3>ID NUMBER : <%= log[i]._id %></h3>
     </div>
   <% } %>
 </body>
