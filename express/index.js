@@ -48,7 +48,7 @@ const app = express();
 // localhost:7000(port number)
 
 app.listen(8000, function(){
-  console.log('8000 포트')
+  console.log('8800 포트')
 })
 
 
