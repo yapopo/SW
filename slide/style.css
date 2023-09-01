@@ -67,6 +67,24 @@ li {
 
 .slick-dots li:nth-child(2){
   position: relative;
-  top: -200px;
-  left: 700px;
+  top: -180px;
+  left: 545px;
+}
+
+.slick-dots li:nth-child(3){
+  position: relative;
+  top: -250px;
+  left : 680px
+}
+
+.slick-dots li:nth-child(4){
+  position: relative;
+  top: -240px;
+  left: 800px;
+}
+
+.slick-dots li:last-child{
+  position: relative;
+  top: -350px;
+  left: 670px;
 }
