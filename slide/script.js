@@ -1,10 +1,11 @@
-<<<<<<< HEAD
 $(".slider").slick({
-  dots: true,
+              dots: true,
+              autoplay : true,
+              autoplaySpeed : 1000,
               arrows: false,
-              infinite: false,
-              slidesToShow: 2,
-              slidesToScroll: 2,
+              infinite: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
   
       //autoplay: true,
       //dots: true
@@ -21,30 +22,3 @@ $(".slider").slick({
       //}]
   });
   
-=======
-$(function() {
-  $('.slider-for').slick({
-      //메인슬라이드
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      asNavFor: '.slider-nav',
-      autoplay: true,
-      autoplaySpeed : 2000,
-      infinite: true,
-      arrows : false       
-  });
-
-  $('.slider-nav').slick({
-      //메인슬라이드 버튼
-      slidesToShow: 5,
-      slidesToScroll: 5,
-      asNavFor: '.slider-for',
-      focusOnSelect: true,
-      autoplay: true,
-      infinite: false,
-      swipe: false,
-      swipeToSlide: false,
-      arrows : false		
-  });
-});
->>>>>>> 31f744b1590cfc0ba1dbc386a065b373dc10b61a
