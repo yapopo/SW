@@ -48,7 +48,7 @@ const app = express();
 // localhost:7000(port number)
 
 app.listen(8000, function(){
-  console.log('8000 포트')
+  console.log('8800 포트')
 })
 
 
@@ -195,4 +195,18 @@ app.get('/data', function(requests, response){
     response.render('data.ejs', {log : result})
   })
 
+})
+
+app.delete('/delete',function(requests,response){
+  console.log(requests.body)
+  requests.body._id = parseInt(requests.body._id)
+
+  db.collection('post').deleteOne({_id : requests.body._id},function(error,result){
+    if(error){
+      console.log(error)
+    }
+    console.log("삭제 완료!")
+  })
+
+  response.status(200).send({message : '삭제되었습니다.'})
 })

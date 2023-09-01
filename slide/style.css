@@ -1,20 +1,29 @@
+.wrapper {
+  width: 1400px;
+  display: flex;
+}
 
 li {
   list-style: none;
 }
 
-.wrapper {
-  width: 1200px;
-  display: flex;
+.slider-box {
+  width: 600px;
+  height: 600px;
+  border: 1px solid #333;
+
 }
 
 .slider {
-    width: 400px;
-    height: 400px;
+  width: 500px;
+  height: 400px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .slider img {
-  width: 400px;
+  width: 500px;
   height: 400px;
   object-fit: cover;
 }

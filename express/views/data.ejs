@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 <body>
   <h1>DB에서 받아온 데이터</h1>
   <% for(let i = 0; i < log.length; i++) { %>
-    <div class="info-box">
-      <h3>ID : <%= log[i].아이디 %></h3>
-      <h3>PW : <%= log[i].비밀번호 %></h3>
+
+    <div class="box-item">
+
+      <div class="info-box" >
+        <p><%= log[i]._id %></p>
+        <h3>ID : <%= log[i].아이디 %></h3>
+        <h3>PW : <%= log[i].비밀번호 %></h3>
+      </div>
+
+      <button type="button" class="delete" data-id="<%= log[i]._id %>">삭제</button>
+
     </div>
+
   <% } %>
+
+  <script>
+    $(".delete").on("click",function(e){
+      let dataNum = e.target.dataset.id
+      let curClick = $(this);
+
+
+      $.ajax({
+        method : 'DELETE',
+        url : '/delete',
+        data : {_id : dataNum}
+      }).done(function(){
+        console.log("요청 성공!");
+        curClick.parent(".box-item").fadeOut();
+      })
+    })
+  </script>
 </body>
 </html>

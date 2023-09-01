@@ -7,8 +7,6 @@ $(".slider").slick({
               slidesToShow: 1,
               slidesToScroll: 1,
   
-      //autoplay: true,
-      //dots: true
       customPaging : function(slider, i) {
           var title = $(slider.$slides[i]).data('title');
           var num = i +1 ;
@@ -16,12 +14,6 @@ $(".slider").slick({
 
       },
   
-      //responsive: [{ 
-      //    breakpoint: 200,
-      //    settings: {
-      ///        d
-      //    } 
-      //}]
   });
 
   $(".pager__item").innerHtml
