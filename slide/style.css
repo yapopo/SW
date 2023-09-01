@@ -28,46 +28,63 @@ li {
   object-fit: cover;
 }
 
-.slick-list {
-  width: 400px;
-  height: 400px;
-}
-
 .slick-dots li {
-  width: auto;
+  display: inline-block;
   z-index: 100;
 }
 
-.slick-active a {
-  background-color: aquamarine;
+
+.slick-dots .slick-active {
+  background-color: rebeccapurple;
   border-radius: 20px;
+  color: #fff;
 }
 
 .pager__item {
+  width: 100%;
   padding: 0 12px;
   display: inline-block;
-  font-weight: 700;
-}
+  font-weight: 600;
+  font-size: 1.2rem;
 
-.slick-dots {
-    bottom: -40px;
 }
 
 .map {
   position: relative;
-  height: 700px;
-}
-
-.slick-dots li:first-child{
-  position: absolute;
-  top: 335px;
-  right: -280px;
-}
-
-.map {
-  height: 700px;
+  z-index: -10;
 }
 
 .map img {
-  height: 700px;
+  width: 700px;
+
+}
+
+.slick-dots li:first-child {
+  position: relative;
+  top: -255px;
+  left: 680px;
+}
+
+.slick-dots li:nth-child(2){
+  position: relative;
+  top: -180px;
+  left: 545px;
+}
+
+.slick-dots li:nth-child(3){
+  position: relative;
+  top: -250px;
+  left : 680px
+}
+
+.slick-dots li:nth-child(4){
+  position: relative;
+  top: -240px;
+  left: 800px;
+}
+
+.slick-dots li:last-child{
+  position: relative;
+  top: -350px;
+  left: 670px;
 }
