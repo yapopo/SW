@@ -196,3 +196,7 @@ app.get('/data', function(requests, response){
   })
 
 })
+
+app.delete('/delete',function(requests,response){
+  console.log(requests.body)
+})
