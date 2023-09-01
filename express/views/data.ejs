@@ -28,7 +28,17 @@
   <script>
     $(".delete").on("click",function(e){
       let dataNum = e.target.dataset.id
-      console.log(dataNum)
+      let curClick = $(this);
+
+
+      $.ajax({
+        method : 'DELETE',
+        url : '/delete',
+        data : {_id : dataNum}
+      }).done(function(){
+        console.log("요청 성공!");
+        curClick.parent(".box-item").fadeOut();
+      })
     })
   </script>
 </body>

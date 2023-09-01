@@ -199,4 +199,14 @@ app.get('/data', function(requests, response){
 
 app.delete('/delete',function(requests,response){
   console.log(requests.body)
+  requests.body._id = parseInt(requests.body._id)
+
+  db.collection('post').deleteOne({_id : requests.body._id},function(error,result){
+    if(error){
+      console.log(error)
+    }
+    console.log("삭제 완료!")
+  })
+
+  response.status(200).send({message : '삭제되었습니다.'})
 })
