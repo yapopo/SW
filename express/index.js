@@ -210,3 +210,15 @@ app.delete('/delete',function(requests,response){
 
   response.status(200).send({message : '삭제되었습니다.'})
 })
+
+// id값 파라미터로 받기
+app.get('/info/:id', function(requests,response){
+  console.log(typeof(requests.params.id))
+  db.collection('post').findOne({_id: parseInt(requests.params.id)},function(error,result){
+    console.log(result)
+    response.render('info.ejs',{data : result})
+    if(error){
+      console.log(error)
+    }
+  })
+})
