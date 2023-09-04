@@ -104,6 +104,7 @@ app.get('/map', function(requests, response){
 // body-parser 라이브러리 설치
 // npm install body-perser
 const bodyParser = require('body-parser');
+const { render } = require('ejs');
 app.use(bodyParser.urlencoded({extended : true}));
 
 // input 값을 서버에 전송하려면 input 태그에 name="" 속성 추가
@@ -222,3 +223,16 @@ app.get('/info/:id', function(requests,response){
     }
   })
 })
+
+app.get('/edit', function(requests,response){
+  response.render('edit.ejs')
+})
+
+app.get('/edit/:id', function(requests, response){
+  db.collection('post').findOne({_id : parseInt(requests.params.id)}, function(error, result){
+    console.log(result)
+    response.render('edit.ejs',{data:result})
+  })
+})
+
+

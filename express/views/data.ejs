@@ -19,7 +19,13 @@
         <h3>PW : <%= log[i].비밀번호 %></h3>
       </div>
 
-      <button type="button" class="delete" data-id="<%= log[i]._id %>">삭제</button>
+      <div class="btns">
+        <a href="/edit/<%= log[i]._id %>">
+          <button type="button" class="edit">수정</button>
+        </a>
+        <button type="button" class="delete" data-id="<%= log[i]._id %>">삭제</button>
+      </div>
+
 
     </div>
 
@@ -37,7 +43,7 @@
         data : {_id : dataNum}
       }).done(function(){
         console.log("요청 성공!");
-        curClick.parent(".box-item").fadeOut();
+        curClick.parents(".box-item").fadeOut();
       })
     })
   </script>

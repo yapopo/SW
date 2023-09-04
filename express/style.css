@@ -8,6 +8,19 @@ body {
   padding: 40px;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
 .box-item {
   display: flex;
   justify-content: space-between;
@@ -30,4 +43,12 @@ body {
 
 .info-box h3{
   margin-right: 20px;
+}
+
+.edit {
+  background-color: dodgerblue;
+}
+
+.delete {
+  background-color: darkolivegreen;
 }
