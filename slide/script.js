@@ -9,8 +9,12 @@ $(".slider").slick({
   
       customPaging : function(slider, i) {
           var title = $(slider.$slides[i]).data('title');
-          return '<a class="pager__item"> '+title+' </a>';
+          var num = i +1 ;
+          return '<a class="pager__item"> '+title+' </a>'
+
       },
   
   });
+
+  $(".pager__item").innerHtml
   
