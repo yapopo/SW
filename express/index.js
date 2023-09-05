@@ -235,4 +235,16 @@ app.get('/edit/:id', function(requests, response){
   })
 })
 
+const methidOverride = require('method-override');
+app.use(methidOverride('_method'));
+
+app.put('/edit',function(requests,response){
+  db.collection('post').updateOne({_id : parseInt(requests.body._id)},{$set : {아이디 : requests.body.id, 비밀번호 : requests.body.pw}},function(error,result){
+
+    console.log('수정!')
+
+    response.redirect('/data')
+  })
+})
+
 
