@@ -248,5 +248,8 @@ app.put('/edit',function(requests,response){
 })
 
 // 수정됨
-
+// login 연결하기
+app.get('/join',function(requests,response){
+  response.render('join.ejs')
+})
 
