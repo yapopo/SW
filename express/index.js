@@ -88,9 +88,9 @@ app.get('/test', function(requests, response){
 
 
 // localhost:7000/login 으로 접속시 보여줄 화면 => login.html
-app.get('/login', function(requests, response){
-  response.sendFile(__dirname + '/login.html')
-})
+// app.get('/login', function(requests, response){
+//   response.sendFile(__dirname + '/login.html')
+// })
 
 // localhost:7000/map 으로 접속시 보여줄 화면 => map.html
 // map.html : 카카오 지도 OPEN API
@@ -268,12 +268,33 @@ app.post('/join',function(requests,response){
         if(error){
           return console.log(error)
         }
-        response.redirect('/join')
+        response.redirect('/login')
       })
   })
 })
 
+
+// Session 로그인 기능 구현(가장 많이 사용)
 // npm install passport 
 // npm install passport-local 
 // npm install express-session
+// 유저가 로그인 하면 Session ID를 하나 발금
+// 서버측,유저측 모두 Session ID값을 본인의 컴퓨터에 가지게 된다
+// Session ID : 유저가 로그인 할때 작성한 정보가 담겨있음
+
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const session = require('express-session');
+
+// app.use (미들웨어)
+// 서버와 요청 사이에 중간에 실행하고 싶은 코드가 있을 때 사용
+// passport 라이브러리 : 미들웨어 제공
+
+app.use(session({secret : 'secret', resave : true, saveUninitialized : false}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.get('/login', function(requests,response){
+  response.render('login.ejs')
+})
 
