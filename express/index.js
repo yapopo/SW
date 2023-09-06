@@ -154,32 +154,32 @@ MongoClient.connect('mongodb+srv://admin:jellc8738@cluster0.muby3x1.mongodb.net/
 })
 
 
-app.post('/data', function(requests, response){
-  console.log(requests.body)
-  response.send('전송 완료!')
+// app.post('/data', function(requests, response){
+//   console.log(requests.body)
+//   response.send('전송 완료!')
 
-  // db total collextion에서 갯수 가져오기
+//   // db total collextion에서 갯수 가져오기
 
-  db.collection('total').findOne({name : 'dataLength'}, function(error,result){
-    console.log(result.totalData)
+//   db.collection('total').findOne({name : 'dataLength'}, function(error,result){
+//     console.log(result.totalData)
 
-    let totalDataLength = result.totalData;
+//     let totalDataLength = result.totalData;
 
-    db.collection('post').insertOne({_id : totalDataLength + 1, 아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
-      console.log(error)
-      console.log('db에 저장완료!')
-    })
+//     db.collection('post').insertOne({_id : totalDataLength + 1, 아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
+//       console.log(error)
+//       console.log('db에 저장완료!')
+//     })
   
-    db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
-      if(error) {
-        return console.log(error)
-      }
-    })
+//     db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
+//       if(error) {
+//         return console.log(error)
+//       }
+//     })
 
-  })
+//   })
 
 
-})
+// })
 
 
 
@@ -296,5 +296,53 @@ app.use(passport.session());
 
 app.get('/login', function(requests,response){
   response.render('login.ejs')
+})
+
+
+// 유저가 로그인 페이지에서 로그인 했을때
+// 데이터를 비교해서 일치하면 응답
+// 중간에 응답하기 전에 미들웨어코드가 실행되어 일치하지 않으면 fail이라는 경로로 redirect
+app.post('/login',passport.authenticate('local',{
+  failureRedirect : '/fail'
+}),function(requests,response){
+  response.redirect('/')
+})
+
+app.get('/fail', function(requests,response){
+  response.send('로그인 실패. 다시 한번 확인해주세요.')
+})
+
+passport.use(new LocalStrategy({
+  usernameField : 'id',
+  passwordField : 'pw',
+  session : true,
+  passReqToCallback : false,
+
+},function(userID, userPW, done){
+  db.collection('login').findOne({id : userID},function(error,result){
+    // result가 없거나 유저가 입력한 값이db에 일치하지 않으면
+    // done(서버에러,db데이터, 에러메세지) => 파라미터 3개 받음
+    if(!result){
+      return done(null,false,{message : '없는 아이디입니다'})
+    }
+
+    if(userPw == result.pw){
+      return done(null,result)
+    }else{
+      return done(null,false,{message : '비밀번호 불일치!'})
+    }
+  })
+}))
+
+// 로그인 성공시, 세션정보 만들고 유저정보를 암호화하는 작업
+passport.serializeUser(function(user,done){
+  done(null, user.id)
+})
+
+// 해당 세션 데이터를 login collection에서 찾는다
+passport.deserializeUser(function(id,done){
+  db.collection('login').findOne({id : id}, function(error,result){
+    done(null,result)
+  })
 })
 
