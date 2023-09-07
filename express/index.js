@@ -299,50 +299,84 @@ app.get('/login', function(requests,response){
 })
 
 
-// 유저가 로그인 페이지에서 로그인 했을때
+// 유저가 로그인 페이지에서 로그인 했을 때
 // 데이터를 비교해서 일치하면 응답
-// 중간에 응답하기 전에 미들웨어코드가 실행되어 일치하지 않으면 fail이라는 경로로 redirect
-app.post('/login',passport.authenticate('local',{
+// 중간에 응답하기 전에 일치하지 않는다면
+// /fail 이라는 경로로 이동
+app.post('/login', passport.authenticate('local', {
   failureRedirect : '/fail'
-}),function(requests,response){
+}), function(requests, response){
   response.redirect('/')
 })
 
-app.get('/fail', function(requests,response){
-  response.send('로그인 실패. 다시 한번 확인해주세요.')
+// 로그인 실패 했을 때 /fail 경로에서 보여줄 화면
+app.get('/fail', function(requests, response){
+  response.send('로그인 실패입니다!') 
 })
 
+// 로컬스트레트지(LocalStrategy)로 아이디, 비밀번호 값 일치 여부
 passport.use(new LocalStrategy({
+  // 유저가 입력한 아이디, 비밀번호에 필드 이름 설정
   usernameField : 'id',
   passwordField : 'pw',
+  // 사용자의 로그인 세션 유지 여부
   session : true,
+  // 아이디, 비밀번호 외에 다른 정보를 추가로 검증하고 싶을 때
+  // req 매개변수 값을 콜백함수로 전달
   passReqToCallback : false,
 
-},function(userID, userPW, done){
-  db.collection('login').findOne({id : userID},function(error,result){
-    // result가 없거나 유저가 입력한 값이db에 일치하지 않으면
-    // done(서버에러,db데이터, 에러메세지) => 파라미터 3개 받음
-    if(!result){
-      return done(null,false,{message : '없는 아이디입니다'})
+  // 콜백함수에서 유저 아이디 / 비밀번호 검증
+}, function(userID, userPW, done){
+  db.collection('login').findOne({아이디 : userID}, function(error, result){
+    // result가 없을 경우 
+    // 유저가 입력한 userID값과 db에 일치하는 값이 없다
+    // done() => 파라미터 3개 받는다
+    // done(서버에러, db데이터, 에러메세지)
+    if(!result) {
+      return done(null, false, {message : '없는 아이디임'})
     }
 
-    if(userPw == result.pw){
-      return done(null,result)
-    }else{
-      return done(null,false,{message : '비밀번호 불일치!'})
+    if(userPW == result.비밀번호) {
+      return done(null, result)
+    } else {
+      return done(null, false, {message : '비밀번호 불일치'})
     }
   })
 }))
 
-// 로그인 성공시, 세션정보 만들고 유저정보를 암호화하는 작업
-passport.serializeUser(function(user,done){
-  done(null, user.id)
+
+// 로그인 성공 -> 세션정보 만들고,
+// 씨리얼라이즈유저(serializeUser) : 유저 정보를 암호화 
+passport.serializeUser(function(user, done){
+  done(null, user.아이디)
 })
 
+
 // 해당 세션 데이터를 login collection에서 찾는다
-passport.deserializeUser(function(id,done){
-  db.collection('login').findOne({id : id}, function(error,result){
-    done(null,result)
+passport.deserializeUser(function(id, done){
+  db.collection('login').findOne({아이디 : id}, function(error, result){
+    done(null, result)
   })
 })
 
+
+// 로그인 한 사람만 접속할 수 있는 경로 /mypage
+app.get('/mypage', getLogin ,function(requests, response){
+  console.log(requests.user)
+  response.render('mypage.ejs', {info : requests.user})
+})
+
+// 로그인 여부를 판단하는 미들웨어
+function getLogin(requests, response, next){
+  if(requests.user) {
+    next()
+  } else {
+    response.send('로그인 하세요!')
+  }
+}
+
+app.post('/logout', function(requests, response){
+  requests.session.destroy();
+  console.log('로그아웃!')
+  response.redirect('/login')
+})
