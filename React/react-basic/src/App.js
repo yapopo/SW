@@ -1,7 +1,8 @@
 
 import './App.css';
-import User from './component/User'
-import Practice from './component/Practice';
+// import User from './component/User'
+// import Practice from './component/Practice';
+import State from './component/State';
 
 
 function App() {
@@ -9,10 +10,13 @@ function App() {
   // 무족건 하나의 태그로 시작해서 끝내야햔다(병렬기입X)
   return (
     <div className="App">
-      <User/>
-      <Practice/>
+      {/* <User/>
+      <Practice/> */}
+      <State></State>
     </div>
   );
 }
 
 export default App;
+
+// Reactjs code snippets 확장깔기 -> rsc+Tab키
