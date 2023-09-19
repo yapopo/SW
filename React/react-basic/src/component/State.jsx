@@ -18,8 +18,8 @@ const State = () => {
   let [bg, setBg] = useState('white');
 
   let changeBg = ()=>{
-    let red = 'red';
-    setBg(red)
+    let yello = 'yellow';
+    setBg(yellow)
   }
   
   return (
