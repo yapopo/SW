@@ -1,10 +1,12 @@
 
 import './App.css';
+import Box from './component/Box';
 
 function App() {
   return (
     <div className="App">
-      <h1 className="hi">HELLO WORLD</h1>
+      <Box></Box>
+      <Box/>
     </div>
   );
 }
