@@ -1,6 +1,7 @@
 
 import './App.css';
 import Nav from './component/header/Nav';
+import Back from './component/main/Back';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Nav/>
+      <Back/>
     </div>
   );
 }
