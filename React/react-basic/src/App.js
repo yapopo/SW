@@ -1,5 +1,6 @@
 
 import './App.css';
+import Nav from './component/header/Nav';
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   // 무족건 하나의 태그로 시작해서 끝내야햔다(병렬기입X)
   return (
     <div className="App">
-
+      <Nav/>
     </div>
   );
 }
