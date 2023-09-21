@@ -6,7 +6,7 @@ import React from 'react';
 // 모든 Array(배열) 뒤에 사용가능 (for each문처럼)
 // map() 함수는 key값을 요구하는 warning이 뜨는데 큰 오류는 아니어서 보통 index값을 key값으로 넣으면 된다
 
-const map = () => {
+const Map = () => {
   return (
     <div>
       {[1,2,3].map((item,index)=>{
@@ -17,8 +17,15 @@ const map = () => {
           </div>
         )
       })}
+
+      {
+        [1,2,3,4,5].map((num)=>{
+          console.log(num)
+        })
+      }
+
     </div>
   );
 };
 
-export default map;
+export default Map;
