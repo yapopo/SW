@@ -1,0 +1,32 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 0 40px;
+}
+
+.logo img{
+  width: 50px;
+}
+
+.gnb-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.gnb-item a {
+  color: #fff;
+}
+
