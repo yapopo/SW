@@ -18,12 +18,14 @@ const State = () => {
   let [bg, setBg] = useState('white');
 
   let changeBg = ()=>{
-    let yello = 'yellow';
-    setBg(yellow)
+
+    let newBg = bg =='white' ? 'yellow' : 'white';
+
+    setBg(newBg);
   }
   
   return (
-    <div style={{background : bg}}>
+    <div style={{backgroundColor : bg}}>
       <h1>{count}</h1>
       <h1>{title}</h1>
       <button onClick={() => setCount(count+1)}>1씩증가</button>

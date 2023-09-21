@@ -2,8 +2,7 @@
 import './App.css';
 // import User from './component/User'
 // import Practice from './component/Practice';
-import State from './component/State';
-
+// import State from './component/State';
 
 function App() {
   // return()안에 html작성
@@ -12,7 +11,7 @@ function App() {
     <div className="App">
       {/* <User/>
       <Practice/> */}
-      <State></State>
+      {/* <State></State> */}
     </div>
   );
 }
