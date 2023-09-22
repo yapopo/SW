@@ -2,6 +2,7 @@
 import './App.css';
 import Nav from './component/header/Nav';
 import Back from './component/main/Back';
+import Card from './component/main/Card';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <Nav/>
       <Back/>
+      <Card/>
     </div>
   );
 }
