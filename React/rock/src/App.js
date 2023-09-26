@@ -10,7 +10,7 @@ let choice = {
 
   paper : {
     name : 'paper',
-    img : 'https://e7.pngegg.com/pngimages/53/291/png-clipart-computer-icons-volunteering-desktop-volunteer-icon-hand-heart.png'
+    img : 'https://cdn-icons-png.flaticon.com/512/4866/4866407.png'
   },
 
   scissors : {
@@ -64,8 +64,8 @@ function App() {
   return (
     <div className="App">
       <div className="inBox">
-        <Box title='You' select={userSelect} result={result}/>
-        <Box title='Computer' select={comSelect} result={result}/>
+        <Box title='You' select={userSelect} result={result} className={result}/>
+        <Box title='Computer' select={comSelect} result={result} className={result}/>
       </div>
 
       <div className="btn-list">
