@@ -7,7 +7,8 @@ const Box = (props) => {
 
       <div className='box'>
           <h1>{props.title}</h1>
-          <h2 className='click-result'></h2>
+          {/* null 이 아닐때만 값이 렌더링 되도록 조건부를 줌 */}
+          <h2 className='click-result'>{props.select && props.select.name}</h2>
           <div className='imgbox'>
             <img src="https://cdn-icons-png.flaticon.com/512/2142/2142439.png" alt="바위이미지" />
           </div>

@@ -23,7 +23,7 @@ function App() {
 
   let [userSelect,setUserSelect] = useState(null);
   let [comSelect,setComSelect] = useState(null);
-  let [result,setResult] = useState(null);
+  let [result,setResult] = useState('');
 
   // 클릭한 값과 컴퓨터의 정보 업데이트하기
   let play = (userChoice)=>{
@@ -64,8 +64,8 @@ function App() {
   return (
     <div className="App">
       <div className="inBox">
-        <Box title='You' className={result} item={userSelect} result={result}/>
-        <Box title='Computer' />
+        <Box title='You' select={userSelect} result={result}/>
+        <Box title='Computer' select={comSelect} result={result}/>
       </div>
 
       <div className="btn-list">
